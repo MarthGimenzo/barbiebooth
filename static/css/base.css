@@ -1,0 +1,111 @@
+/* Custom fonts */
+
+@font-face {
+    font-family: "DollieScript_PersonalUse";
+    src: url('../fonts/DollieScript_PersonalUse.ttf'),
+    url('../fonts/DollieScript_PersonalUse.ttf'); /* IE */
+}
+
+.dollie-font {
+    font-family: 'DollieScript_PersonalUse';
+}
+
+/* Elements */
+
+html {
+    height: 100%;
+}
+
+body {
+    background: url('/media/homepage_background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 164px);
+    color: #9a5366;
+    font-family: 'Ubuntu';
+}
+
+/* from Bulma */
+
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+
+.see-the-button {
+    background: #fff568;
+    color: #9a5366;
+    min-width: 260px;
+    border: 5px solid #9a5366;
+}
+
+.barbie-home-picture {
+    background: url('/media/barbie1.png') no-repeat center center;
+    background-size: 80%;
+    height: 100%;
+    -webkit-filter: drop-shadow(4px 4px 0 #9a5366)
+                  drop-shadow(-4px -4px 0 #9a5366);
+    filter: drop-shadow(4px 4px 0 #9a5366) 
+            drop-shadow(-4px -4px 0 #9a5366);
+}
+
+.btn-purple {
+    background: #fff568!important;
+    color: #9a5366!important;
+}
+
+.see-the-button:hover,
+.see-the-button:active,
+.see-the-button:focus,
+.btn-purple:hover,
+.btn-purple:active,
+.btn-purple:focus {
+    background: #222;
+    color: white;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.text-purple {
+    color: #9a5366 !important;
+}
+
+.border-purple {
+    border: 2px solid #9a5366 !important;
+}
+
+.bg-pink {
+    background: #f4b5c6;
+}
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
+}
