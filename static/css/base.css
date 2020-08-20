@@ -38,6 +38,12 @@ body {
     width: fit-content;
 }
 
+.logo-size {
+    color: white!important;
+    text-shadow: -2px 0 #000, 0 2px #000, 2px 0 #000, 0 -2px #000;
+    font-size: 60px;
+}
+
 .see-the-button {
     background: #fff568;
     color: #9a5366;
@@ -49,10 +55,12 @@ body {
     background: url('/media/barbie1.png') no-repeat center center;
     background-size: 80%;
     height: 100%;
+    /* Disabled for dropshadow load times....
     -webkit-filter: drop-shadow(4px 4px 0 #9a5366)
                   drop-shadow(-4px -4px 0 #9a5366);
     filter: drop-shadow(4px 4px 0 #9a5366) 
             drop-shadow(-4px -4px 0 #9a5366);
+    */
 }
 
 .btn-purple {
@@ -82,8 +90,29 @@ body {
     border: 2px solid #9a5366 !important;
 }
 
+.border-collapse-purple {
+    border-left: 2px solid #9a5366 !important;
+    border-bottom: 2px solid #9a5366 !important;
+    border-right: 2px solid #9a5366 !important;
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.bottom-border {
+    border-bottom: 2px solid #9a5366 !important;
+}
+
 .bg-pink {
     background: #f4b5c6;
+}
+
+.bg-light-pink {
+    background: #ffd1dd;
+}
+
+.nav-item-big {
+    font-size: 30px;
 }
 
 /* -------------------------------- Media Queries */
