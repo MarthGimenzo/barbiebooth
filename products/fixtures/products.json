@@ -1,0 +1,77 @@
+[ 
+    {
+        "pk": 1,
+        "model": "products.product",
+        "fields": {
+            "sku": "0001",
+            "name": "Barbie nr. 1 Ponytail",
+            "description": "Made of flesh-toned vinyl plastic, she is a long limbed, shapely doll. She has movable head, arms and legs.",
+            "price": 53.99,
+            "category": 6,
+            "year": "1959",
+            "condition": 4.6,
+            "image_url": "",
+            "image": "0001.jpg"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.product",
+        "fields": {
+            "sku": "0002",
+            "name": "Bubble cut Barbie",
+            "description": "Pale pink lips and nails",
+            "price": 60.00,
+            "category": 6,
+            "year": "1962",
+            "condition": 3.6,
+            "image_url": "",
+            "image": "0002.jpg"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.product",
+        "fields": {
+            "sku": "0003",
+            "name": "Ken (0750)",
+            "description": "New markings. Now same height as original",
+            "price": 23.00,
+            "category": 6,
+            "year": "1964",
+            "condition": 4.0,
+            "image_url": "",
+            "image": "0003.jpg"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.product",
+        "fields": {
+            "sku": "0004",
+            "name": "Skipper (0950)",
+            "description": "Original red and white swimsuit",
+            "price": 32.50,
+            "category": 6,
+            "year": "1964",
+            "condition": 4.2,
+            "image_url": "",
+            "image": "0004.jpg"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.product",
+        "fields": {
+            "sku": "0005",
+            "name": "Talking Christie",
+            "description": "This doll's hair turned a strange shade of red",
+            "price": 20.50,
+            "category": 6,
+            "year": "1969",
+            "condition": 1.6,
+            "image_url": "",
+            "image": "0005.jpg"
+        }
+    }
+]
