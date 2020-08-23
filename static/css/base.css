@@ -155,6 +155,11 @@ body {
     margin-top: 115px;
 }
 
+.product_details_image {
+    height: 80%;
+    width: 80%;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
