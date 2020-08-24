@@ -90,13 +90,13 @@
                                 </div>
                             </a>
                             <div class="dropdown-menu dropdown-menu-style bg-light-pink text-spacing mb-2" aria-labelledby="all-products-link">
-                                <a href="" class="dropdown-item black-white-border">Barbie</a>
-                                <a href="" class="dropdown-item black-white-border">Francie</a>
-                                <a href="" class="dropdown-item black-white-border">Skipper</a>
-                                <a href="" class="dropdown-item black-white-border">Christie</a>
-                                <a href="" class="dropdown-item black-white-border">Julie</a>
-                                <a href="" class="dropdown-item black-white-border">Ken</a>
-                                <a href="" class="dropdown-item black-white-border text-yellow">ALL DOLLS!</a>
+                                <a href="{% url 'products' %}?category=barbie" class="dropdown-item black-white-border">Barbie</a>
+                                <a href="{% url 'products' %}?category=francie" class="dropdown-item black-white-border">Francie</a>
+                                <a href="{% url 'products' %}?category=skipper" class="dropdown-item black-white-border">Skipper</a>
+                                <a href="{% url 'products' %}?category=christie" class="dropdown-item black-white-border">Christie</a>
+                                <a href="{% url 'products' %}?category=julia" class="dropdown-item black-white-border">Julia</a>
+                                <a href="{% url 'products' %}?category=ken" class="dropdown-item black-white-border">Ken</a>
+                                <a href="{% url 'products' %}?category=barbie,francie,skipper,christie,julia,ken" class="dropdown-item black-white-border text-yellow">ALL DOLLS</a>
                             </div>
                         </li>
                         <!-- ACCESSORIES -->
@@ -116,10 +116,10 @@
                                 </div>
                             </a>
                             <div class="dropdown-menu dropdown-menu-style bg-light-pink mb-2" aria-labelledby="all-products-link">
-                                <a href="" class="dropdown-item black-white-border">Clothing</a>
-                                <a href="" class="dropdown-item black-white-border">Shoes</a>
-                                <a href="" class="dropdown-item black-white-border">Bags</a>
-                                <a href="" class="dropdown-item black-white-border text-yellow">ALL ACCESSORIES!</a>
+                                <a href="{% url 'products' %}?category=clothing" class="dropdown-item black-white-border">Clothing</a>
+                                <a href="{% url 'products' %}?category=shoes" class="dropdown-item black-white-border">Shoes</a>
+                                <a href="{% url 'products' %}?category=bags" class="dropdown-item black-white-border">Bags</a>
+                                <a href="{% url 'products' %}?category=clothing,shoes,bags" class="dropdown-item black-white-border text-yellow">ALL ACCESSORIES!</a>
                             </div>
                         </li>
                         <!-- SEARCH -->
@@ -169,7 +169,7 @@
                                     <p class="my-0">ACCOUNT</p>
                                 </div>
                                  <div class="text-left black-white-border d-lg-none mb-2">
-                                 <hr></hr>
+                                 <hr>
                                     <table>
                                         <tr>
                                             <td style="min-width:35px"><i class="fas fa-user fa-lg"></i></td>
