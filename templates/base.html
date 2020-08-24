@@ -66,10 +66,10 @@
                             
                             <div class="dropdown-menu dropdown-menu-style bg-light-pink text-spacing mb-2" aria-labelledby="all-products-link">
                             
-                                <a href="" class="dropdown-item black-white-border">Sort by: <span class="text-yellow">PRICE</span></a>
-                                <a href="" class="dropdown-item black-white-border">Sort by: <span class="text-yellow">CATEGORY</span></a>
-                                <a href="" class="dropdown-item black-white-border">Sort by: <span class="text-yellow">YEAR</span></a>
-                                <a href="" class="dropdown-item black-white-border">Sort by: <span class="text-yellow">CONDITION</span></a>
+                                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item black-white-border">Sort by: <span class="text-yellow">PRICE</span></a>
+                                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item black-white-border">Sort by: <span class="text-yellow">CATEGORY</span></a>
+                                <a href="{% url 'products' %}?sort=year&direction=asc" class="dropdown-item black-white-border">Sort by: <span class="text-yellow">YEAR</span></a>
+                                <a href="{% url 'products' %}?sort=condition&direction=desc" class="dropdown-item black-white-border">Sort by: <span class="text-yellow">CONDITION</span></a>
                                 <a href="{% url 'products' %}" class="dropdown-item black-white-border text-yellow">SHOW EVERYHTING!</a>
                             </div>
                         </li>
