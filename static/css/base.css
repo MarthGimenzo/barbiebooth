@@ -96,9 +96,28 @@ body {
 .btn-purple:hover,
 .btn-purple:active,
 .btn-purple:focus {
-    background: #222;
-    color: white;
+    background: #9a5366;
+    color: #fff568;
 }
+
+.category-button {
+    background: #fff568;
+    color: #9a5366;
+    min-width: 100px;
+    max-width:120px;
+    border: 5px solid #9a5366;
+}
+
+.category-button:hover,
+.category-button:active,
+.category-button:focus,
+.btn-purple:hover,
+.btn-purple:active,
+.btn-purple:focus {
+    background: #9a5366;
+    color: #fff568;
+}
+
 
 .text-black {
     color: #000 !important;
@@ -158,6 +177,10 @@ body {
 .product_details_image {
     height: 80%;
     width: 80%;
+}
+
+.sort-height {
+    height: 50px;
 }
 
 /* -------------------------------- Media Queries */

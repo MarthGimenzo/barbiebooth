@@ -14,13 +14,39 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col text-center push-top">
-                <h2 class="">MY WHOLE COLLECTION</h2>
+                <h2 class="">The Products</h2>
+                {% for c in current_categories %}
+                    <a class="category-button btn rounded-pill p-0 mb-1" href="{% url 'products' %}?category={{ c.name }}">
+                        {{ c.friendly_name }}
+                    </a>
+                {% endfor %}
                 <hr class="w-50 mb-1">
             </div>
         </div>
         <div class="row">
             <div class="product-container col-10 offset-1">
-                <div class="row mt-1 mb-2"></div>
+                <div class="row mt-1 mb-2">
+                    <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
+                        <div class="sort-select-wrapper w-50">
+                            <select id="sort-selector" class="custom-select custom-select-sm rounded-pill sort-height border border-{% if current_sorting != 'None_None' %}info{% else %}purple{% endif %}">
+                                <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>SORT BY:</option>
+                                <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
+                                <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
+                                <option value="condition_asc" {% if current_sorting == 'condition_asc' %}selected{% endif %}>Condition (low to high)</option>
+                                <option value="condition_desc" {% if current_sorting == 'condition_desc' %}selected{% endif %}>Condition (high to low)</option>
+                                <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A to Z)</option>
+                                <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z to A)</option>
+                                <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A to Z)</option>
+                                <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z to A)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 order-md-first">
+                        <p class="text-muted mt-3 text-center text-md-left">
+                            {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+                        </p>
+                    </div>
+                </div>
                 <div class="row">
                     {% for product in products %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
@@ -37,6 +63,13 @@
                             <div class="card-body pb-0">
                                 <p class="lead mb-0 text-left font-weight-bold">{{ product.name }}</p>
                                 <p class="mb-0"><i class="far fa-calendar-minus"></i> Year: {{ product.year }}</p>
+                                {% if product.category %}
+                                    <p class="mb-0">
+                                        <a class="text-purple" href="{% url 'products' %}?category={{ product.category.name }}">
+                                            <i class="fas fa-list mr-1"></i>Category: {{ product.category.friendly_name }}
+                                        </a>
+                                    </p>
+                                {% endif %}
                                 {% if product.condition %}
                                     <p class="mb-0"><i class="fas fa-hand-holding-heart mr-1"></i>Condition: {{ product.condition}} / 5</p>
                                 {% else %}
