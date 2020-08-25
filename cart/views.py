@@ -24,7 +24,7 @@ def add_to_cart(request, item_id):
         cart[item_id] = quantity
 
     else:
-        messages.info(request, f'You already have {product.name} in your cart!')
+        messages.warning(request, f'You already have {product.name} in your cart!')
 
     request.session['cart'] = cart
     return redirect(redirect_url)
