@@ -197,7 +197,8 @@ body {
     background: #fff568;
 }
 
-.btt-link {
+.btt-link,
+.remove-item {
     cursor: pointer;
 }
 
