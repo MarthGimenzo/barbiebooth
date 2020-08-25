@@ -53,7 +53,7 @@ body {
     min-width: 20rem;
 }
 
-/*  */
+/* Change the border radius of the navbar on screens smaller than xl */
 @media (max-width: 1199px) {
     .navbar {
         border-radius: 35px!important;
@@ -202,6 +202,23 @@ body {
     cursor: pointer;
 }
 
+/* Bootstrap Toasts */
+
+.message-container {
+    position: fixed;
+    top: 120px;
+    right: 20px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+
+}
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
