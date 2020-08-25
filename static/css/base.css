@@ -90,6 +90,16 @@ body {
     border: 5px solid #9a5366;
 }
 
+.see-the-button-small {
+    background: #fff568;
+    color: #9a5366;
+    min-width: 200px;
+    max-width:260px;
+    border: 5px solid #9a5366;
+    margin: 0px;
+    padding: 3px;
+}
+
 .see-the-button:hover,
 .see-the-button:active,
 .see-the-button:focus,
@@ -218,6 +228,12 @@ body {
 .toast-capper {
     height: 2px;
 
+}
+
+.bag-notification-wrapper {
+    height: 120px;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 
