@@ -195,8 +195,8 @@
                                 <div class="text-center black-white-border d-none d-lg-block">
                                     <div><i class="fas fa-shopping-cart fa-lg"></i></div>
                                     <p class="my-0">
-                                        {% if grand_total %}
-                                            ${{ grand_total|floatformat:2 }}
+                                        {% if total %}
+                                            ${{ total|floatformat:2 }}
                                         {% else %}
                                             $0.00
                                         {% endif %}
@@ -206,8 +206,8 @@
                                     <table>
                                         <tr>
                                             <td style="min-width:35px"><i class="fas fa-shopping-cart fa-lg"></i></td>
-                                            <td>IN YOUR CART: {% if grand_total %}
-                                                    ${{ grand_total|floatformat:2 }}
+                                            <td>IN YOUR CART: {% if total %}
+                                                    ${{ total|floatformat:2 }}
                                                 {% else %}
                                                     $0.00
                                                 {% endif %}
