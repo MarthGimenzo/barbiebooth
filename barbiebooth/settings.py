@@ -64,7 +64,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'barbiebooth.urls'
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
+# This is where the bootstrap4 is loaded for Crispy Forms
+# CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 TEMPLATES = [
     {
@@ -85,6 +86,7 @@ TEMPLATES = [
                 'cart.contexts.cart_contents',
             ],
             'builtins': [
+                # Templates for ch
                 'crispy_forms.templatetags.crispy_forms_tags',
                 'crispy_forms.templatetags.crispy_forms_field',
             ]
