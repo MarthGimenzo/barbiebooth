@@ -13,8 +13,7 @@
 <div class="container h-100">
     <div class="row h-100">
         <div class="col-5 mt-5 p-0 bubbleback">
-            <div id="barbie-home-picture" class="barbie-home-picture">
-            </div>
+            <img src="/media/barbie1.png" class="barbie-home-picture" alt="Barbie"/>
         </div>
         <div class="col-7 my-auto text-center">
             <h1 class="display-4 text-purple dollie-font">
@@ -28,5 +27,15 @@
         </div>
     </div>
 </div>
+{% endblock %}
 
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+        var x = document.getElementById("barbie-home-picture")
+        setInterval(function(){
+            $('.barbie-home-picture').hide("slide", {direction: "left"}, 5);
+        })
+        
+    </script>
 {% endblock %}

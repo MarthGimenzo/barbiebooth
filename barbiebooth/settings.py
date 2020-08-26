@@ -65,7 +65,7 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'barbiebooth.urls'
 
 # This is where the bootstrap4 is loaded for Crispy Forms
-# CRISPY_TEMPLATE_PACK = 'bootstrap4'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 TEMPLATES = [
     {

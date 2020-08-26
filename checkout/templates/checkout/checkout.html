@@ -1,5 +1,7 @@
 {% extends "base.html" %}
+{% load crispy_forms_field %}
 {% load static %}
+
 
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
@@ -73,7 +75,7 @@
                 <p class="text-purple">Please enter the details of your order</p>
                 <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                     {% csrf_token %}
-                    <fieldset class="rounded-pill px-3 mb-5">
+                    <fieldset class="rounded-pill px-3 mb-5 ">
                         <legend class="fieldset-label text-purple px-2">Details</legend>
                         {{ order_form.full_name | as_crispy_field }}
                         {{ order_form.email | as_crispy_field }}
