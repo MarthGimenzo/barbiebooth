@@ -77,6 +77,20 @@ body {
     */
 }
 
+@media (min-width: 1200px) {
+    .barbie-home-picture {
+        background: url('/media/barbie1.png') no-repeat center center;
+        background-size: 80%;
+        height: 110%;
+    }
+}
+
+.bubbleback {
+    background: url('/media/bubbles-transparent.png') no-repeat center center;
+    background-size: 100%;
+    z-index: 5;
+}
+
 .btn-purple {
     background: #fff568!important;
     color: #9a5366!important;
@@ -184,7 +198,7 @@ body {
     position: fixed;
     background: url('/media/overlay_background.jpg') no-repeat center center fixed;
     background-size: cover;
-    z-index: -1;
+    z-index: -3;
 }
 
 .push-top {
