@@ -194,6 +194,10 @@ body {
     background: #ffd1dd;
 }
 
+.bg-light-yellow {
+    background: #fffea7;
+}
+
 .bg-transparent {
     background: transparent;
 }
