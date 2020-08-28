@@ -1,0 +1,90 @@
+/* Checkout Page */
+
+.StripeElement,
+.stripe-style-input {
+  box-sizing: border-box;
+  height: 40px;
+  padding: 10px 12px;
+  border: 1px solid transparent;
+  border-radius: 0px;
+  background-color:white;
+  box-shadow: 0 1px 3px 0 #e6ebf1;
+  -webkit-transition: box-shadow 150ms ease;
+  transition: box-shadow 150ms ease;
+}
+
+.StripeElement--focus,
+.stripe-style-input:focus,
+.stripe-style-input:active {
+  box-shadow: 0 1px 3px 0 #cfd7df;
+}
+
+.StripeElement--webkit-autofill {
+  background-color: #fefde5 !important;
+}
+
+.stripe-style-input::placeholder {
+    color: #aab7c4;
+}
+
+.fieldset-label {
+    position: relative;
+    right: .5rem;
+}
+
+.form-control {
+    border: 5px solid #9a5366!important;
+    border-radius: 35px!important;
+
+}
+
+#card-element {
+    border: 5px solid #9a5366!important;
+    border-radius: 35px!important;
+    height:50px;
+}
+
+/* Overlay style */
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: url('/media/overlay_background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    z-index: -3;
+}
+
+.push-top {
+    margin-top: 115px;
+}
+
+.product_details_image {
+    height: 80%;
+    width: 80%;
+}
+
+.product_details_image {
+    height: 80%;
+    width: 80%;
+}
+
+.sort-height {
+    height: 50px;
+}
+
+.btt-button {
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: #fff568;
+}
+
+.btt-link,
+.remove-item {
+    cursor: pointer;
+}
