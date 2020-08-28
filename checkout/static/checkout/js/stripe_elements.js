@@ -6,15 +6,15 @@
     https://stripe.com/docs/stripe-js
 */
 
-var stripePublicKey = $('#id_stripe_public_key').text().slice(1,-1);
-var clientSecret = $('#id_client_secret').text().slice(1,-1);
+var stripePublicKey = $('#id_stripe_public_key').text().slice(1, -1);
+var clientSecret = $('#id_client_secret').text().slice(1, -1);
 var stripe = Stripe(stripePublicKey);
 var elements = stripe.elements();
 
 
 var style = {
     base: {
-        color: '#32325d',
+        color: '#9a5366',
         fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
         fontSmoothing: 'antialiased',
         fontSize: '16px',
@@ -54,7 +54,7 @@ var form = document.getElementById('payment-form');
 form.addEventListener('submit', function(ev) {
     ev.preventDefault();
     card.update({ 'disabled': true});
-    $('#submit-button').attr('disabled', true)
+    $('#submit-button').attr('disabled', true);
     stripe.confirmCardPayment(clientSecret, {
         payment_method: {
             card: card,
@@ -71,12 +71,12 @@ form.addEventListener('submit', function(ev) {
                 `;
             $(errorDiv).html(html);
             card.update({ 'disabled': false});
-            $('#submit-button').attr('disabled', false)
+            $('#submit-button').attr('disabled', false);
         } else {
             // The payment has been processed!
             if (result.paymentIntent.status === 'succeeded') {
                 // Show a success message to your customer
-                form.onsubmit();
+                form.submit();
             }
         }
     });

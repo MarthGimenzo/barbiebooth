@@ -202,7 +202,50 @@ body {
     background: transparent;
 }
 
+/* Overlay style */
 
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: url('/media/overlay_background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    z-index: -3;
+}
+
+.push-top {
+    margin-top: 115px;
+}
+
+.product_details_image {
+    height: 80%;
+    width: 80%;
+}
+
+.product_details_image {
+    height: 80%;
+    width: 80%;
+}
+
+.sort-height {
+    height: 50px;
+}
+
+.btt-button {
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: #fff568;
+}
+
+.btt-link,
+.remove-item {
+    cursor: pointer;
+}
 
 /* Bootstrap Toasts */
 

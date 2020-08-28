@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}" type="text/css">
+{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container push-top">
+        <div class="row">
+            <div class="col">
+                <hr>
+                    <h2 class="mb-4">Oh my.. Thank you!</h2>
+                <hr>
+                <p>I'll send it to you as soon as quickly as I can! 
+                And I will send an email to <strong>{{ order.email }}
+                </strong> with all the details!</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-lg-7">
+            
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-lg-7 text-right">
+                <a href="{% url 'products' %}" class="btn rounded-pill see-the-button">
+                    <span class="icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </span>
+                    <span class="font-weight-bold">I'm on a shopping spree!</span>
+                </a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
