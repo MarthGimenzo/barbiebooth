@@ -94,14 +94,14 @@ def checkout_success(request, order_number):
     """PUT DELETE ITEM FROM DATABASE HERE?"""
     messages.success(request, f'Ohh yeah! Thank you! \
         Your order number is {order_number}. A confirmation \
-        email will be sent to your {order.email}.')
+        email will be sent to {order.email}.')
 
     if 'cart' in request.session:
         del request.session['cart']
 
     template = 'checkout/checkout_success.html'
     context = {
-        order: order,
+        'order': order,
     }
 
     return render(request, template, context)
