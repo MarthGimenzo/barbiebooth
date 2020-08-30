@@ -27,7 +27,7 @@ SECRET_KEY = 'tvro@*gptpg9%3w6$v_0m(255lt@q9^b%0s%omtzx0hdzgumci'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['barbiebooth.herokuapp.com', 'localhost']
 
 
 # Application definition
