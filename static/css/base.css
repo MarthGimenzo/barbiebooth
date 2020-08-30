@@ -308,3 +308,13 @@ body {
         z-index: 1030;
     }
 }
+
+/* Fixed logo in navbar on small devices */
+
+@media (max-width: 991px) {
+    .logo-size {
+    
+    font-size: 20px;
+    }
+}
+
