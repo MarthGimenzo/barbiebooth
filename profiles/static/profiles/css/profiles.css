@@ -1,0 +1,9 @@
+#profile-update-form input::placeholder {
+    color: #aab7c4;
+}
+
+#id_default_country {
+    height: 50px;
+    color: #aab7c4;
+}
+
