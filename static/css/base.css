@@ -123,8 +123,32 @@ body {
     max-width:260px;
     border: 5px solid #9a5366;
     margin: 0px;
-    padding: 3px;
+    padding: 5px;
 }
+
+
+@media (max-width: 991px) {
+    .see-the-button-small {
+    background: #fff568;
+    color: #9a5366;
+    min-width: 170px;
+    max-width:260px;
+    border: 5px solid #9a5366;
+    margin: 0px;
+    padding: 0px;
+    font-size: medium;
+    }
+}
+
+
+
+@media (max-width: 991px) {
+    .logo-size {
+    
+    font-size: 30px;
+    }
+}
+
 
 .see-the-button:hover,
 .see-the-button:active,
@@ -314,7 +338,7 @@ body {
 @media (max-width: 991px) {
     .logo-size {
     
-    font-size: 20px;
+    font-size: 30px;
     }
 }
 
