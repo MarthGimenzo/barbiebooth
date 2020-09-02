@@ -66,10 +66,11 @@ body {
 }
 
 .barbie-home-picture {
-    margin-top: 80px;
-    height: 60vh;
+    margin-top: 50px;
+    min-height: 70vh;
+    max-height: 80vh;
     object-fit: contain;
-    margin-left: -100px;
+    margin-left: -120px;
     z-index: 4;
     /* Disabled for dropshadow load times....
     -webkit-filter: drop-shadow(4px 4px 0 #9a5366)
@@ -97,7 +98,7 @@ body {
 
 
 .bubbleback {
-    background: url('/media/bubbles-transparent.png') no-repeat center center;
+    background: url('/media/star.png') no-repeat center center;
     background-size: 100%;
     padding-right: -50%;
     z-index: 5;
@@ -264,6 +265,11 @@ body {
 .push-top {
     margin-top: 115px;
 }
+
+.half-push-top {
+    margin-top: 75px;
+}
+
 
 .product_details_image {
     height: 80%;
