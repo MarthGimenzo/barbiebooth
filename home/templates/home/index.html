@@ -12,10 +12,12 @@
 {% block content %}
 <div class="container-fluid h-100 mt-5">
     <div class="row h-100">
-        <div class="col-3 p-0 offset-1">
-            <img src="{{ MEDIA_URL }}barbie1.png" class="barbie-home-picture" alt="Barbie"/>
+        <div class="col-4 p-0">
+            <div class="slide-out">
+                <img src="{{ MEDIA_URL }}barbie1.png" class="barbie-home-picture" alt="Barbie"/>
+            </div>
         </div>
-        <div class="col-7 text-center half-push-top">
+        <div class="col-8 text-center half-push-top">
             <h1 class="display-4 mt-5 text-purple dollie-font">
                 "Just take a look at us!"
             </h1>
@@ -32,10 +34,36 @@
 {% block postloadjs %}
     {{ block.super }}
     <script type="text/javascript">
-        var x = document.getElementById("barbie-home-picture")
+
+        //function SlideBarbieOut() {
+        //    $('.barbie-home-picture').addClass("Barbieslideout")
+
+
+        //function SlideBarbieIn() {
+        //    console.log('Yes hoor')
+            
+        //    $('.barbie-home-picture').addClass("Barbieslidein")
+        //}
+
         setInterval(function(){
-            $('.barbie-home-picture')
-        })
+            console.log('function is called')
+            $('.slide-out').hide("slide", { direction: "left" }, 500);
+            setTimeout(
+                function() 
+                {
+                    console.log('Wait 2 seconds before slide in')
+                    $('.slide-out').show("slide", { direction: "left" }, 500)
+                }, 1000);
+            ;
+            
+            
+            
+        }, 10000 );
+
+        
+           // SlideBarbieOut().then(SlideBarbieIn());     
+        
+        
         
     </script>
 {% endblock %}
