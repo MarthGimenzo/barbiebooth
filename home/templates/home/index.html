@@ -12,13 +12,13 @@
 {% block content %}
 <div class="container-fluid h-100 mt-5">
     <div class="row h-100">
-        <div class="col-4 p-0">
+        <div class="col-4 p-0 p-0">
             <div class="slide-out">
-                <img src="{{ MEDIA_URL }}barbie1.png" class="barbie-home-picture" alt="Barbie"/>
+                <img src="{{ MEDIA_URL }}barbie1.png" id="barbiepicture" class="barbie-home-picture" alt="Barbie"/>
             </div>
         </div>
         <div class="col-8 text-center half-push-top">
-            <h1 class="display-4 mt-5 text-purple dollie-font">
+            <h1 class="display-4 mt-5 text-purple dollie-font" id="headertext">
                 "Just take a look at us!"
             </h1>
             <div class="mt-5">
@@ -34,25 +34,48 @@
 {% block postloadjs %}
     {{ block.super }}
     <script type="text/javascript">
-
-        //function SlideBarbieOut() {
-        //    $('.barbie-home-picture').addClass("Barbieslideout")
-
-
-        //function SlideBarbieIn() {
-        //    console.log('Yes hoor')
-            
-        //    $('.barbie-home-picture').addClass("Barbieslidein")
-        //}
+        
+        var barbiePicture = 1
+        console.log('One time setting of barbiepicture')
 
         setInterval(function(){
-            console.log('function is called')
+            
             $('.slide-out').hide("slide", { direction: "left" }, 500);
+            barbiePicture += 1
+            
+
+            if (barbiePicture > 5) {
+                console.log('if barbie picture is 5')
+                barbiePicture = 1
+            }
+
+            
             setTimeout(
                 function() 
                 {
+                    
                     console.log('Wait 2 seconds before slide in')
-                    $('.slide-out').show("slide", { direction: "left" }, 500)
+
+                    console.log(barbiePicture)
+
+                    if (barbiePicture == 1) {
+                        $("#barbiepicture").attr("src","{{ MEDIA_URL }}barbie1.png");
+                        $("#headertext").text('"Just take look at us!"')
+                    }
+                    else if (barbiePicture == 2) {
+                        $("#barbiepicture").attr("src","{{ MEDIA_URL }}barbie2.png");
+                        $("#headertext").text('"I\'d rather go to the moon than being sold"');
+                    }
+                    else if (barbiePicture == 3) {
+                        $("#barbiepicture").attr("src","{{ MEDIA_URL }}barbie2.png");
+                    }
+                    else if (barbiePicture == 4) {
+                        $("#barbiepicture").attr("src","{{ MEDIA_URL }}barbie2.png");
+                    }
+                    else {
+                        $("#barbiepicture").attr("src","{{ MEDIA_URL }}barbie2.png");
+                    }
+                    $('.slide-out').ready().show("slide", { direction: "left" }, 500)
                 }, 1000);
             ;
             

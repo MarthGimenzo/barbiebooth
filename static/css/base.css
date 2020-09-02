@@ -318,36 +318,6 @@ body {
     overflow-y: auto;
 }
 
-/* -------------------------------- Animations */
-
-/* Slide Barbie Out Left */
-@keyframes Slide_Out{
-    0% {
-        transform: translateX(0px);
-    }
-    100% {
-        transform: translateX(-500px);
-    }
-}
-
-@keyframes Slide_In{
-    0% {
-        transform: translateX(-500px);
-    }
-    100% {
-        transform: translateX(0px);
-    }
-}
-
-.Barbieslideout {
-    animation: Slide_Out 0.4s ease;
-    position: absolute;
-}
-
-.Barbieslidein {
-    animation: Slide_In 0.4s ease;
-    position: absolute;
-}
 
 
 
