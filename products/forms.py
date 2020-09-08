@@ -17,11 +17,8 @@ class CommentForm(forms.ModelForm):
         of Code Institute
         """
         super().__init__(*args, **kwargs)
-        placeholders = {
-            'description': 'Description',
-        }
 
-        self.fields['description'].widget.attrs['autofocus'] = True
+        self.fields['description'].widget.attrs['autofocus'] = False
         for field in self.fields:
             self.fields[field].widget.attrs['class'] = 'commentform'
             self.fields[field].label = False

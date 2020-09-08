@@ -24,8 +24,7 @@
             <div class="col-12 col-md-6 col-lg-5 offset-lg-1">
                 <div class="product-details-container mb-2 mt-md-5">
                     <p class="lead mb-0 text-left font-weight-bold">{{ product.name }}</p>
-                    <p class="lead mb-0 text-left font-weight-bold">{{ product.views }}</p>
-                    <p class="lead mb-0 text-left font-weight-bold">{{ product.get_availabilty_display }}</p>
+                    <!--<p class="mb-0"><i class="far fa-calendar-minus"></i> Status: {{ product.get_availabilty_display }}</p>-->
                     <p class="mb-0"><i class="far fa-calendar-minus"></i> Year: {{ product.year }}</p>
                     {% if product.category %}
                         <p class="mb-0">
@@ -39,13 +38,18 @@
                     {% else %}
                         <p class="mb-0">Condition: Contact me to ask me about the condition of this product!</p>
                     {% endif %}
+                    <i class="fas fa-eye mr-1"></i>Viewed: {{ product.views }} times
                     <p class="lead mb-0 text-left font-weight-bold">${{ product.price}}</p>
                     <p class="mt-3">{{ product.description }}</p>
                     <form class="form" action="{% url 'add_to_cart' product.id %}" method="POST">
                         {% csrf_token %}
                         <div class="form-row">
                             <div class="col-12">
+                            {% if product.availabilty == 'available' %}
                                 <input type="submit" class="see-the-button btn btn-lg rounded-pill py-3" value="Put it in my cart!">
+                            {% else %}
+                                <h2 class="text-darkmint">This product has been sold already!</h2>
+                            {% endif %}
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
