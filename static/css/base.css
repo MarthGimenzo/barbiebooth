@@ -17,7 +17,7 @@ html {
 }
 
 body {
-    background: url('/media/homepage_background.jpg') no-repeat center center fixed;
+    background: url('/media/homepage_background3.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 50px);
     color: #9a5366;
@@ -71,7 +71,24 @@ body {
     max-height: 80vh;
     object-fit: contain;
     margin-left: -120px;
+    position: relative;
     z-index: 4;
+    /* Disabled for dropshadow load times....
+    -webkit-filter: drop-shadow(4px 4px 0 #9a5366)
+                  drop-shadow(-4px -4px 0 #9a5366);
+    filter: drop-shadow(4px 4px 0 #9a5366) 
+            drop-shadow(-4px -4px 0 #9a5366);
+    */
+}
+
+.standard {
+    margin-top: 50px;
+    min-height: 70vh;
+    max-height: 80vh;
+    object-fit: contain;
+    margin-left: -120px;
+    position: absolute;
+    z-index: 3;
     /* Disabled for dropshadow load times....
     -webkit-filter: drop-shadow(4px 4px 0 #9a5366)
                   drop-shadow(-4px -4px 0 #9a5366);
@@ -94,15 +111,25 @@ body {
                 drop-shadow(-4px -4px 0 #9a5366);
         */
     }
+
+    .standard {
+    margin-top: 80px;
+    height: 60vh;
+    object-fit: contain;
+    margin-left: 70px;
+    position: absolute;
+    z-index: 3;
+    /* Disabled for dropshadow load times....
+    -webkit-filter: drop-shadow(4px 4px 0 #9a5366)
+                  drop-shadow(-4px -4px 0 #9a5366);
+    filter: drop-shadow(4px 4px 0 #9a5366) 
+            drop-shadow(-4px -4px 0 #9a5366);
+    */
+    }
 }
 
 
-.bubbleback {
-    background: url('/media/star.png') no-repeat center center;
-    background-size: 100%;
-    padding-right: -50%;
-    z-index: 5;
-}
+
 
 .btn-purple {
     background: #fff568!important;
