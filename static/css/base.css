@@ -254,6 +254,12 @@ body {
     background: transparent;
 }
 
+.commentform {
+    border: 5px solid #9a5366 !important;
+    max-height: 100px; !important;
+    align: center;
+}
+
 /* Allauth form formatting */
 
 .allauth-form-inner-content p {

@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load crispy_forms_tags %}
 
 {% block page_header %}
     <div class="container header-container">
@@ -73,36 +74,66 @@
                 <hr class="w-50 mb-1">
             </div>
         </div>
+        
         <div class="row">
             {% for comment in comments %}
-            {% if comment.name == 'Admin' %}
-            <div class="col-7 offset-2 rounded-pill border-purple bg-light-pink mb-1">
-                <p class="text-purple mt-3 mb-0 pl-3"><strong>Admin:</strong> | {{ comment.created_date }}</p>
+            {% if comment.name == 'GeiskeZijlstra' %}
+            <div class="col-9 offset-1 rounded border-purple bg-light-pink mb-1">
+                <p class="text-purple mt-3 mb-0 pl-2"><strong>Geiske Zijlstra:</strong> | <small>{{ comment.created_date }}</small></p>
                 <hr class="mt-0 mb-0">
-                <p class="text-purple mb-3 pl-3">{{ comment.description }}</p>
+                <p class="text-purple mb-3 pl-2">{{ comment.description }}</p>
             </div>
             {% else %}
-            <div class="col-7 offset-4 rounded-pill border-purple bg-light-yellow mb-1">
-                <p class="text-purple mt-3 mb-0 pl-3"><strong>{{ comment.name }}</strong> | {{ comment.created_date }}</p>
+            <div class="col-9 offset-2 rounded border-purple bg-light-yellow mb-1">
+                <p class="text-purple mt-3 mb-0 pl-2"><strong>{{ comment.name }}</strong> | <small>{{ comment.created_date }}</small></p>
                 <hr class="mt-0 mb-0">
-                <p class="text-purple mb-3 pl-3">{{ comment.description }}</p>
+                <p class="text-purple mb-3 pl-2">{{ comment.description }}</p>
             </div>
             {% endif %}
             {% endfor%}
             <hr class="">
-            <div class="col-9 offset-2 border-purple bg-white mb-1">
-                <p class="text-purple mt-3 mb-0"><strong>Add a comment:</strong></p>
-                <hr class="mt-0 mb-0">
+        </div>
+        <div class="row mb-5 mt-1">
+            {% if request.user.is_authenticated %}
+            <div class="col-10 offset-1 mb-1 mt-2 text-center">
+                <h2 class="text-center">Add comment</h2>
+                <hr class="w-50 mb-1">
                 <form action="{% url 'product_detail' product.id %}" enctype="multipart/form-data" method="post">
                     {% csrf_token %}
-                    {{ form.name }}
-                    {{ form.name.label_tag }}
-                    
-                    {{ form.description }}
-                    {{ form.description.label_tag }}
-                    <input class="rounded-pill" type="submit" value="Submit!" class="border-1">
+                    <div class="row mt-2 mb-2">
+                        <div class="col-12 px-0">
+                        <strong> {{ request.user.username }}:</strong>
+                        {{ form.description | as_crispy_field }}
+                        </div>
+                    </div>
+                    <input type="hidden" id="name" name="name" value="{{ request.user.username }}">
+                    <input class="see-the-button btn btn-lg rounded-pill py-1" type="submit" value="Submit!">
                 </form>
             </div>
+            {% else %}
+            
+            <div class="col-10 offset-1 mt-2 mb-1 text-center">
+                <div class="row">
+                    <div class="col text-center">
+                    Please login to add comments!
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col mt-2 text-center">
+                    <form class="form" action="{% url 'account_login' %}" method="POST">
+                        {% csrf_token %}
+                        <div class="form-row">
+                            <div class="col-12">
+                                <input type="submit" class="see-the-button btn btn-lg rounded-pill py-1" value="Log In Now!">
+                            </div>
+                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        </div>
+                    </form>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
         </div>
+        
     </div>
 {% endblock %}

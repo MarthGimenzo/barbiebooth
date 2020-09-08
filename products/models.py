@@ -1,10 +1,10 @@
 from django.db import models
-
+from django.contrib.auth.models import User
 
 class Category(models.Model):
     class Meta:
         verbose_name_plural = 'Categories'
-    
+
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
     # created_date = models.DateTimeField(auto_now_add=True)
@@ -18,10 +18,12 @@ class Category(models.Model):
 
 
 AVAILABILITY = (
-    ('sold', 'verkocht'),
+    ('sold', 'Sold'),
     # ('option', 'optie'),
-    ('available', 'beschikbaar'),
+    ('available', 'Available'),
 )
+
+
 class Product(models.Model):
     category = models.ForeignKey('Category', null=True, blank=True, 
                                  on_delete=models.SET_NULL)
@@ -55,7 +57,8 @@ class Product(models.Model):
 
 
 class Comment(models.Model):
-    product = models.ForeignKey('Product', null=True, blank=True, on_delete=models.SET_NULL)
+    product = models.ForeignKey('Product', null=True, blank=True,
+                                on_delete=models.SET_NULL)
     name = models.CharField(max_length=254)
     description = models.TextField()
     created_date = models.DateTimeField(auto_now_add=True)

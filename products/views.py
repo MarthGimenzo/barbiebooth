@@ -62,6 +62,7 @@ def all_products(request):
 
     return render(request, 'products/products.html', context)
 
+
 def product_detail(request, product_id):
     """A view for the details of the product"""
     product = get_object_or_404(Product, pk=product_id)
@@ -70,13 +71,13 @@ def product_detail(request, product_id):
     if request.POST:
         comment = Comment()
         comment.product = product
-        comment.name = request.POST['name']                                 # user.friendlyname
+        comment.name = request.POST['name']     # user.friendlyname
         comment.description = request.POST['description']
         comment.save()
-
+        messages.info(request, 'Your comment has been posted.')
         return redirect(reverse('product_detail',
-                                args=[request.product_id]))
-        # return redirect(reverse('product_detail', args=()))
+                                args=[product.pk]))
+
     else:
         product.views += 1
         product.save()
