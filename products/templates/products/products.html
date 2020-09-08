@@ -26,8 +26,11 @@
         <div class="row">
             <div class="product-container col-10 offset-1">
                 <div class="row mt-1 mb-2">
-                    <div class="col-6 col-md-6 my-auto d-flex justify-content-center justify-content-md-end">
-                        <div class="sort-select-wrapper w-50">
+                    <div class="col-4">
+                    Sort products:
+                    </div>
+                    <div class="col-8 d-flex justify-content-center justify-content-md-end">
+                        <div class="sort-select-wrapper p-0 w-100">
                             <select id="sort-selector" class="custom-select custom-select-sm rounded-pill sort-height border border-purple">
                                 <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>SORT BY:</option>
                                 <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
@@ -43,70 +46,88 @@
                             </select>
                         </div>
                     </div>
-                    <div class="col-6 col-md-6">
+                    <!--<div class="col-12 col-md-12">
                         <p class="text-muted mt-3 text-center text-md-left">
                             {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
                         </p>
+                    </div>-->
+                </div>
+                <div class="row mt-1 mb-2">
+                    <div class="col-4">
+                        <p class="mb-0 text-left">
+                            Show only available:
+                        </p>
+                     </div>
+                    <div class="col-8 d-flex justify-content-left mt-2">
+                        <!-- From W3schools.com -->
+                        <label class="switch">
+                            <input type="checkbox" id="onlyAvailable">
+                            <span class="slider round"></span>
+                        </label>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row mb-5">
                     {% for product in products %}
-                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 product  mb-3">
                             <div class="card h-100 border-0">
-                            {% if product.image %}
-                                <a href="{% url 'product_detail' product.id %}">
-                                    <img class="card-img-top img-fluid rounded-lg" src="{{ product.image.url }}" alt="{{ product.name }}">
-                                </a>
-                            {% else %}
-                                <a href="{% url 'product_detail' product.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                                </a>
-                            {% endif %}
-                            <div class="card-body pb-0">
-                                <p class="lead mb-0 text-left font-weight-bold">{{ product.name }}</p>
-                                <p class="mb-0"><i class="far fa-calendar-minus"></i> Year: {{ product.year }}</p>
-                                {% if product.category %}
-                                    <p class="mb-0">
-                                        <a class="text-purple" href="{% url 'products' %}?category={{ product.category.name }}">
-                                            <i class="fas fa-list mr-1"></i>Category: {{ product.category.friendly_name }}
-                                        </a>
-                                    </p>
-                                {% endif %}
-                                {% if product.condition %}
-                                    <p class="mb-0"><i class="fas fa-hand-holding-heart mr-1"></i>Condition: {{ product.condition}} / 5</p>
+                                {% if product.image %}
+                                    <a href="{% url 'product_detail' product.id %}">
+                                        <img class="card-img-top img-fluid rounded-lg" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                    </a>
                                 {% else %}
-                                    <p class="mb-0">Condition: Contact Me!</p>
+                                    <a href="{% url 'product_detail' product.id %}">
+                                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                    </a>
                                 {% endif %}
-                            </div>
-                            <div class="card-footer bg-white pt-0 border-0 text-left">
-                                <p class="lead mb-0 text-left font-weight-bold">Price: ${{ product.price }}</p>
-                            </div>
+                                <div class="card-body pb-0 {% if product.availabilty == 'sold' %}bg-grey{% endif %}">
+                                    <p class="lead mb-0 text-left font-weight-bold">{{ product.name }}</p>
+                                    <p class="small mb-0"><i class="far fa-calendar-minus"></i> Year: {{ product.year }}</p>
+                                    {% if product.category %}
+                                        <p class="small mb-0">
+                                            <a class="text-purple" href="{% url 'products' %}?category={{ product.category.name }}">
+                                                <i class="fas fa-list mr-1"></i>Category: {{ product.category.friendly_name }}
+                                            </a>
+                                        </p>
+                                    {% endif %}
+                                    {% if product.condition %}
+                                        <p class="small mb-1"><i class="fas fa-hand-holding-heart mr-1"></i>Condition: {{ product.condition}} / 5</p>
+                                    {% else %}
+                                        <p class="small mb-1">Condition: Contact Me!</p>
+                                    {% endif %}
+                                </div>
+                                <div class="card-footer {% if product.availabilty == 'sold' %}bg-grey{% endif %} pt-0 border-0 text-left">
+                                    {% if product.availabilty == 'available' %}
+                                        <p class="lead mb-0 text-left font-weight-bold mt-2">Price: ${{ product.price }}</p>
+                                    {% else %}
+                                        <p class="lead mb-0 text-left text-darkmint font-weight-bold mt-2">Sold!</p>
+                                    {% endif %}
+                                </div>
                             </div>
                         </div>
 
-                        {% if forloop.counter|divisibleby:1 %}
-                        <div class="col-12 d-sm-none mb-5">
+                        <!-- {% if forloop.counter|divisibleby:1 %}
+                        <div class="col-12 d-sm-none mb-1">
                             <hr>
                         </div>
                         {% endif %}
 
                         {% if forloop.counter|divisibleby:2 %}
-                        <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+                        <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-1">
                             <hr>
                         </div>
                         {% endif %}
 
                         {% if forloop.counter|divisibleby:3 %}
-                        <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+                        <div class="col-12 d-none d-lg-block d-xl-none mb-1">
                             <hr>
                         </div>
                         {% endif %}
 
                         {% if forloop.counter|divisibleby:4 %}
-                        <div class="col-12 d-none d-xl-block mb-5">
+                        <div class="col-12 d-none d-xl-block mb-1">
                             <hr>
                         </div>
-                        {% endif %}
+                        {% endif %} -->
 
                     {% endfor %}
                 </div>
@@ -147,6 +168,19 @@
 
                 window.location.replace(currentUrl);
             }
+        })
+    </script>
+    <script type="text/javascript">
+        $('#onlyAvailable').change(function() {
+            cb = document.getElementById('onlyAvailable')
+                console.log(cb.checked)
+                if (cb.checked == false) {
+                    product = $(".product:contains('Sold!')")
+                    product.show();
+                } else {
+                    product = $(".product:contains('Sold!')")
+                    product.hide();
+                }
         })
     </script>
 {% endblock %}
