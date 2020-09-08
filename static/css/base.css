@@ -218,6 +218,10 @@ body {
     color: #FFFFFF !important;
 }
 
+.text-grey {
+    color: grey;
+}
+
 .text-purple {
     color: #9a5366 !important;
 }

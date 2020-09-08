@@ -15,6 +15,9 @@
         <div class="row">
             <div class="col text-center push-top">
                 <h2 class="">The Products</h2>
+                    <a class="category-button btn rounded-pill p-0 mb-1" href="{% url 'products' %}">
+                        Show All
+                    </a>
                 {% for c in current_categories %}
                     <a class="category-button btn rounded-pill p-0 mb-1" href="{% url 'products' %}?category={{ c.name }}">
                         {{ c.friendly_name }}
@@ -80,7 +83,7 @@
                                     </a>
                                 {% endif %}
                                 <div class="card-body pb-0 {% if product.availabilty == 'sold' %}bg-grey{% endif %}">
-                                    <p class="lead mb-0 text-left font-weight-bold">{{ product.name }}</p>
+                                    <p class="lead mb-0 text-left font-weight-bold {% if product.availabilty == 'sold' %}text-grey{% endif %}">{{ product.name }}</p>
                                     <p class="small mb-0"><i class="far fa-calendar-minus"></i> Year: {{ product.year }}</p>
                                     {% if product.category %}
                                         <p class="small mb-0">
@@ -91,8 +94,6 @@
                                     {% endif %}
                                     {% if product.condition %}
                                         <p class="small mb-1"><i class="fas fa-hand-holding-heart mr-1"></i>Condition: {{ product.condition}} / 5</p>
-                                    {% else %}
-                                        <p class="small mb-1">Condition: Contact Me!</p>
                                     {% endif %}
                                 </div>
                                 <div class="card-footer {% if product.availabilty == 'sold' %}bg-grey{% endif %} pt-0 border-0 text-left">
@@ -144,11 +145,13 @@
 {% block postloadjs %}
     {{ block.super }}
     <script type="text/javascript">
+
+        // Scroll to top of page when clicked on arrow at bottom of page
         $('.btt-link').click(function(e) {
             window.scrollTo(0,0)
         })
-    </script>
-    <script type="text/javascript">
+
+        // Refresh page and sort products when the selector is changed
         $('#sort-selector').change(function() {
             var selector = $(this);
             var currentUrl = new URL(window.location);
@@ -169,18 +172,18 @@
                 window.location.replace(currentUrl);
             }
         })
-    </script>
-    <script type="text/javascript">
+
+        // Hide products that are not available anymore
         $('#onlyAvailable').change(function() {
             cb = document.getElementById('onlyAvailable')
-                console.log(cb.checked)
-                if (cb.checked == false) {
-                    product = $(".product:contains('Sold!')")
-                    product.show();
-                } else {
-                    product = $(".product:contains('Sold!')")
-                    product.hide();
-                }
-        })
+            console.log(cb.checked)
+            if (cb.checked == false) {
+                product = $(".product:contains('Sold!')")
+                product.show();
+            } else {
+                product = $(".product:contains('Sold!')")
+                product.hide();
+            };
+        });
     </script>
 {% endblock %}
