@@ -411,7 +411,22 @@ input:checked + .slider:before {
 
 .btt-link,
 .remove-item {
+    color: #9a5366 !important;
     cursor: pointer;
+    border: 5px solid #9a5366 !important;
+    border-radius: 50rem!important;
+    background: #fff568;
+    padding: 5px;
+}
+
+.remove-item:hover {
+    background: #9a5366;
+    color: #fff568 !important;
+}
+
+.picture-width {
+    max-width: 70%;
+    
 }
 
 /* Bootstrap Toasts */
