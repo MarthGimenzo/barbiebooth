@@ -260,6 +260,10 @@ body {
     background: #fffea7;
 }
 
+.bg-light-mint {
+    background: #dbf1e5;
+}
+
 .bg-white {
     background: white;
 }
@@ -409,7 +413,10 @@ input:checked + .slider:before {
     background: #fff568;
 }
 
-.btt-link,
+.btt-link {
+    cursor: pointer;
+}
+
 .remove-item {
     color: #9a5366 !important;
     cursor: pointer;

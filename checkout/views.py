@@ -157,8 +157,8 @@ def checkout_success(request, order_number):
                 user_profile_form.save()
 
     messages.success(request, f'Ohh yeah! Thank you! \
-        Your order number is {order_number}. A confirmation \
-        email will be sent to {order.email}.')
+        I will send a confirmation email to:  \
+        {order.email}.')
 
     if 'cart' in request.session:
         del request.session['cart']
