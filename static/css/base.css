@@ -370,6 +370,17 @@ input:checked + .slider:before {
 .allauth-form-inner-content input::placeholder {
     color:#aab7c4;
 }
+
+#id_email,
+#id_email2,
+#id_username,
+#id_password1,
+#id_password2,
+#id_login,
+#id_password {
+    max-width: 420px !important;
+    margin: auto;
+}
     
 
 
