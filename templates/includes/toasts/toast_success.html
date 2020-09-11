@@ -14,7 +14,7 @@
             </div>
         </div>
         {% if total and not on_profile_page %}
-            <p class="bg-light-mint text-purple py-1"><strong>What you picked:</strong></p>
+            <p class="bg-light-mint text-purple py-1"><strong>What you picked so far:</strong></p>
             <div class="bag-notification-wrapper">
                 {% for item in cart_items %}
                     <div class="row">
@@ -39,7 +39,7 @@
                     </p></strong>
                 </div>
             </div>
-            <div class="row">
+            <div class="row mt-2">
                 <div class="col text-center">
                     <a href="{% url 'view_cart' %}" class="see-the-button text-purple btn btn-lg rounded-pill text-center">Buy this!</a>
                 </div>

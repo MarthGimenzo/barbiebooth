@@ -49,33 +49,7 @@
                 <div class="collapse navbar-collapse" id="navbarMenu">
                     <!-- LISTED MIDDLE -->
                     <ul class="navbar-nav ml-auto">
-                        <!-- COLLECTION -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link text-purple pt-0 pb-0 mr-4" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <div class="text-center d-none d-lg-block">
-                                    <div><i class="fas fa-book-open fa-lg black-white-border"></i></div>
-                                    <p class="my-0 text-purple">COLLECTION</p>
-                                </div>
-                                <div class="text-left d-lg-none mb-2">
-                                    <hr>
-                                    <table>
-                                        <tr>
-                                            <td style="min-width:35px"><i class="black-white-border fas fa-book-open fa-lg"></i></td>
-                                            <td>COLLECTION</td>
-                                        </tr>
-                                    </table>
-                                </div>
-                            </a>
-                            
-                            <div class="dropdown-menu dropdown-menu-style bg-light-pink text-spacing mb-2" aria-labelledby="all-products-link">
-                            
-                                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item text-purple">Sort by: <span class="text-darkmint">PRICE</span></a>
-                                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item text-purple">Sort by: <span class="text-darkmint">CATEGORY</span></a>
-                                <a href="{% url 'products' %}?sort=year&direction=asc" class="dropdown-item text-purple">Sort by: <span class="text-darkmint">YEAR</span></a>
-                                <a href="{% url 'products' %}?sort=condition&direction=desc" class="dropdown-item text-purple">Sort by: <span class="text-darkmint">CONDITION</span></a>
-                                <a href="{% url 'products' %}" class="dropdown-item text-darkmint">SHOW EVERYHTING!</a>
-                            </div>
-                        </li>
+                        
                         <!-- DOLLS -->
                         <li class="nav-item dropdown">
                             <a class="nav-link text-purple pt-0 pb-0 mr-4" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -177,6 +151,24 @@
                                 
                             </div>
                             
+                        </li>
+                        <!-- ABOUT -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-purple pt-0 pb-0 mr-4" href="{% url 'about' %}">
+                                <div class="text-center d-none d-lg-block">
+                                    <div><i class="fas fa-info fa-lg black-white-border"></i></div>
+                                    <p class="my-0 text-purple">ABOUT</p>
+                                </div>
+                                <div class="text-left d-lg-none mb-2">
+                                    <hr>
+                                    <table>
+                                        <tr>
+                                            <td style="min-width:35px"><i class="black-white-border fas fa-info fa-lg"></i></td>
+                                            <td>ABOUT</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </a>
                         </li>
                     </ul>
                     <!-- LISTED RIGHT -->
