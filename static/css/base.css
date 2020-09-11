@@ -150,6 +150,21 @@ body {
     border: 5px solid #9a5366;
 }
 
+.add-to-cart {
+    background: #fff568;
+    color: #9a5366;
+    min-width: 150px;
+    max-width: 200px;
+    border: 5px solid #9a5366;
+}
+
+.add-to-cart:hover,
+.add-to-cart:active,
+.add-to-cart:focus {
+    background: #9a5366;
+    color: #fff568;
+}
+
 .see-the-button-small {
     background: #fff568;
     color: #9a5366;

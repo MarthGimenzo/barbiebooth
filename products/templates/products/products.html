@@ -96,9 +96,14 @@
                                         <p class="small mb-1"><i class="fas fa-hand-holding-heart mr-1"></i>Condition: {{ product.condition}} / 5</p>
                                     {% endif %}
                                 </div>
-                                <div class="card-footer {% if product.availabilty == 'sold' %}bg-grey{% endif %} pt-0 border-0 text-left">
+                                <div class="text-center card-footer {% if product.availabilty == 'sold' %}bg-grey{% endif %} pt-0 border-0 text-left">
                                     {% if product.availabilty == 'available' %}
                                         <p class="lead mb-0 text-left font-weight-bold mt-2">Price: ${{ product.price }}</p>
+                                        <form class="form" action="{% url 'add_to_cart' product.id %}" method="POST">
+                                        {% csrf_token %}
+                                        <input type="submit" class="add-to-cart btn rounded-pill py-1 px-0" value="I need this">
+                                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                        </form>
                                     {% else %}
                                         <p class="lead mb-0 text-left text-darkmint font-weight-bold mt-2">Sold!</p>
                                     {% endif %}
