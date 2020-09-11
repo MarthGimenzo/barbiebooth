@@ -53,10 +53,12 @@ body {
     min-width: 20rem;
 }
 
-.nav-link:hover {
-    background-image: url('/media/select.png');
-    background-size: cover;
-    max-width: 120px;
+.nav-hover:hover,
+.nav-hover:active,
+.nav-hover:focus {
+    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+    transition: color .5s ease-in-out;
+    color: white !important;
 }
 
 /* Change the border radius of the navbar on screens smaller than xl */
@@ -251,6 +253,10 @@ body {
     color: #fff568 !important;
 }
 
+.text-light-mint {
+    color: #dbf1e5 !important;
+}
+
 .text-spacing {
     letter-spacing: 1px;
 }
@@ -293,8 +299,7 @@ body {
 
 .commentform {
     border: 5px solid #9a5366 !important;
-    max-height: 100px; !important;
-    align: center;
+    max-height: 100px !important;
 }
 
 /* Slider from W3schools */

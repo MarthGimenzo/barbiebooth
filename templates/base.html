@@ -52,12 +52,12 @@
                         
                         <!-- DOLLS -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link text-purple pt-0 pb-0 mr-4" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link nav-hover text-purple pt-0 pb-0 mr-4" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <div class="text-center d-none d-lg-block">
                                     <div><i class="fas fa-female fa-lg black-white-border"></i></div>
                                     <p class="my-0">DOLLS</p>
                                 </div>
-                                <div class="text-left d-lg-none mb-2">
+                                <div class="text-left d-lg-none mb-2 mt-2">
                                     <table>
                                     <tr>
                                         <td style="min-width:35px"><i class="fas fa-female fa-lg black-white-border"></i></td>
@@ -66,37 +66,20 @@
                                     </table>
                                 </div>
                             </a>
-                            <div class="dropdown-menu dropdown-menu-style bg-light-pink text-spacing mb-2" aria-labelledby="all-products-link">
-                                <a href="{% url 'products' %}?category=barbie" class="dropdown-item text-purple">
-                                Barbie
+                            <div class="dropdown-menu dropdown-menu-style bg-light-pink text-spacing mb-1 py-0" aria-labelledby="all-products-link">
+                                <a href="{% url 'products' %}?category=barbie" class="dropdown-item text-purple">Barbie</a>
+                                <a href="{% url 'products' %}?category=francie" class="dropdown-item text-purple">Francie</a>
+                                <a href="{% url 'products' %}?category=skipper" class="dropdown-item text-purple">Skipper</a>
+                                <a href="{% url 'products' %}?category=christie" class="dropdown-item text-purple">Christie</a>
+                                <a href="{% url 'products' %}?category=julia" class="dropdown-item text-purple">Julia</a>
+                                <a href="{% url 'products' %}?category=ken" class="dropdown-item text-purple">Ken</a>
                                 <hr class="mt-0 mb-0">
-                                </a>
-                                <a href="{% url 'products' %}?category=francie" class="dropdown-item text-purple">
-                                Francie
-                                <hr class="mt-0 mb-0">
-                                </a>
-                                <a href="{% url 'products' %}?category=skipper" class="dropdown-item text-purple">
-                                Skipper
-                                <hr class="mt-0 mb-0">
-                                </a>
-                                <a href="{% url 'products' %}?category=christie" class="dropdown-item text-purple">
-                                Christie
-                                <hr class="mt-0 mb-0">
-                                </a>
-                                <a href="{% url 'products' %}?category=julia" class="dropdown-item text-purple">
-                                Julia
-                                <hr class="mt-0 mb-0">
-                                </a>
-                                <a href="{% url 'products' %}?category=ken" class="dropdown-item text-purple">
-                                Ken
-                                <hr class="mt-0 mb-0">
-                                </a>
                                 <a href="{% url 'products' %}?category=barbie,francie,skipper,christie,julia,ken" class="dropdown-item text-darkmint">ALL DOLLS</a>
                             </div>
                         </li>
                         <!-- ACCESSORIES -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link text-purple pt-0 pb-0 mr-4" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link nav-hover text-purple pt-0 pb-0 mr-4" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <div class="text-center d-none d-lg-block">
                                     <div><i class="fas fa-shopping-bag fa-lg black-white-border"></i></div>
                                     <p class="my-0">ACCESSORIES</p>
@@ -110,16 +93,17 @@
                                     </table>
                                 </div>
                             </a>
-                            <div class="dropdown-menu dropdown-menu-style bg-light-pink mb-2" aria-labelledby="all-products-link">
+                            <div class="dropdown-menu dropdown-menu-style bg-light-pink text-spacing mb-1 py-0" aria-labelledby="all-products-link">
                                 <a href="{% url 'products' %}?category=clothing" class="dropdown-item text-purple">Clothing</a>
                                 <a href="{% url 'products' %}?category=shoes" class="dropdown-item text-purple">Shoes</a>
                                 <a href="{% url 'products' %}?category=bags" class="dropdown-item text-purple">Bags</a>
-                                <a href="{% url 'products' %}?category=clothing,shoes,bags" class="dropdown-item text-darkmint">ALL ACCESSORIES!</a>
+                                <hr class="mt-0 mb-0">
+                                <a href="{% url 'products' %}?category=clothing,shoes,bags" class="dropdown-item text-darkmint">ALL ACCESSORIES</a>
                             </div>
                         </li>
                         <!-- SEARCH -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link text-purple pt-0 pb-0 mr-4" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link nav-hover text-purple pt-0 pb-0 mr-4" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <div class="text-center d-none d-lg-block">
                                     <div><i class="fas fa-search fa-lg black-white-border"></i></div>
                                         <p class="my-0">SEARCH</p>
@@ -153,13 +137,13 @@
                             
                         </li>
                         <!-- ABOUT -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link text-purple pt-0 pb-0 mr-4" href="{% url 'about' %}">
+                        <li class="nav-item dropdown nav-hover">
+                            <a class="nav-link nav-hover text-purple pt-0 pb-0 mr-0" href="{% url 'about' %}">
                                 <div class="text-center d-none d-lg-block">
                                     <div><i class="fas fa-info fa-lg black-white-border"></i></div>
-                                    <p class="my-0 text-purple">ABOUT</p>
+                                    <p class="my-0">ABOUT</p>
                                 </div>
-                                <div class="text-left d-lg-none mb-2">
+                                <div class="text-left d-lg-none mb-0">
                                     <hr>
                                     <table>
                                         <tr>
@@ -174,37 +158,45 @@
                     <!-- LISTED RIGHT -->
                     <ul class="navbar-nav ml-auto">
                         <!-- ACCOUNT -->
-                        
                         <li class="nav-item dropdown">
-                            <a class="nav-link text-purple pt-0 pb-0 mr-4" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link nav-hover text-purple pt-0 pb-0 mr-3" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <div class="text-center d-none d-lg-block">
                                     <div><i class="fas fa-user fa-lg black-white-border"></i></div>
-                                    <p class="my-0 text-purple">ACCOUNT</p>
+                                    {% if request.user.is_authenticated %}
+                                            <p class="my-0">{{user.username}}</p>
+                                            {% else %}
+                                            <p class="my-0">SIGN IN</p>
+                                            {% endif %}
+                                    
                                 </div>
                                  <div class="text-left d-lg-none mb-2">
                                  <hr>
                                     <table>
                                         <tr>
                                             <td style="min-width:35px"><i class="fas fa-user fa-lg black-white-border"></i></td>
-                                            <td>ACCOUNT</td>
+                                            {% if request.user.is_authenticated %}
+                                            <td>{{user.username}}</td>
+                                            {% else %}
+                                            <td>SIGN IN</td>
+                                            {% endif %}
                                         </tr>
                                     </table>
                                 </div>
                             </a>
                             <div class="dropdown-menu dropdown-menu-style bg-light-pink mb-2" aria-labelledby="user-options">
                                 {% if request.user.is_authenticated %}
-                                    <a href="{% url 'profile' %}" class="dropdown-item text-purple">MY PROFILE</a>
-                                    <a href="{% url 'account_logout' %}" class="dropdown-item text-purple">LOGOUT</a>
+                                    <a href="{% url 'profile' %}" class="dropdown-item text-purple">My Profile</a>
+                                    <a href="{% url 'account_logout' %}" class="dropdown-item text-purple">Log Out</a>
                                 {% else %}
-                                    <a href="{% url 'account_signup' %}" class="dropdown-item text-purple">REGISTER</a>
-                                    <a href="{% url 'account_login' %}" class="dropdown-item text-purple">LOGIN</a>
+                                    <a href="{% url 'account_signup' %}" class="dropdown-item text-purple">Register</a>
+                                    <a href="{% url 'account_login' %}" class="dropdown-item text-purple">Log In</a>
                                 {% endif %}
                             </div>
                             
                         </li>
                         <!-- CART -->
                         <li class="nav-item">
-                            <a class="{% if total %}text-yellow font-weight-bold{% else %}text-purple{% endif %} nav-link pt-0 pb-0 mr-4S" href="{% url 'view_cart' %}">
+                            <a class="{% if total %}text-darkmint font-weight-bold{% else %}text-purple{% endif %} nav-link nav-hover pt-0 pb-0 mr-4S" href="{% url 'view_cart' %}">
                                 <div class="text-center d-none d-lg-block">
                                     <div><i class="fas fa-shopping-cart fa-lg black-white-border"></i></div>
                                     <p class="my-0">
