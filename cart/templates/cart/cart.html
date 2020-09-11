@@ -70,8 +70,10 @@
                         </table>
                     </div>
                 {% else %}
-                    <p class="lead mb-5">You have nothing in your cart</p>
-                    <a href="{% url 'products' %}" class="see-the-button btn btn-lg rounded-pill py-3">See My Collection!</a>
+                    <div class="text-center">
+                        <p class="lead mb-5 text-center">You have nothing in your cart</p>
+                        <a href="{% url 'products' %}" class="see-the-button btn btn-lg rounded-pill py-3">See My Collection!</a>
+                    </div>
                 {% endif %}
             </div>
         </div>
