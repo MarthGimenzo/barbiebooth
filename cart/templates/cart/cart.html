@@ -51,10 +51,8 @@
                                     <td class="py-3 w-25">
                                         <p class="my-0 text-purple">$ {{ item.product.price }}</p>
                                     </td>
-                                    <td class="py-3 w-25">
-                                        
+                                    <td class="py-3 w-25">       
                                     </td>
-                                    
                                 </tr>
                             {% endfor %}
                             <tr>
@@ -88,7 +86,6 @@
         var itemId = $(this).attr('id').split('remove_')[1];
         var url = `/cart/remove/${itemId}/`;
         var data = {'csrfmiddlewaretoken': csrfToken};
-
         $.post(url, data)
         .done(function(){
             location.reload();

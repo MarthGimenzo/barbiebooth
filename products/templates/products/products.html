@@ -29,11 +29,10 @@
         <div class="row">
             <div class="product-container col-10 offset-1">
                 <div class="row mt-1 mb-2">
-                    <div class="col-4">
-                    Sort products:
-                    </div>
-                    <div class="col-8 d-flex justify-content-center justify-content-md-end">
-                        <div class="sort-select-wrapper p-0 w-100">
+                    
+                    <div class="col-10 d-flex justify-content-center justify-content-md-end">
+                        <div class="sort-select-wrapper p-0 w-100 form-inline">
+                            <label class=" mr-2" for="sort-selector">Sort:   </label>
                             <select id="sort-selector" class="custom-select custom-select-sm rounded-pill sort-height border border-purple">
                                 <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>SORT BY:</option>
                                 <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
@@ -56,15 +55,12 @@
                     </div>-->
                 </div>
                 <div class="row mt-1 mb-2">
-                    <div class="col-4">
-                        <p class="mb-0 text-left">
-                            Show only available:
-                        </p>
-                     </div>
                     <div class="col-8 d-flex justify-content-left mt-2">
                         <!-- From W3schools.com -->
+                        <label class="switch mr-2" for="onlyAvailable">Only available:</label>
                         <label class="switch">
                             <input type="checkbox" id="onlyAvailable">
+                            
                             <span class="slider round"></span>
                         </label>
                     </div>
