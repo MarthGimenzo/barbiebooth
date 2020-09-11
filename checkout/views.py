@@ -59,15 +59,27 @@ def checkout(request):
             order.stripe_pid = pid
             order.original_cart = json.dumps(cart)
             order.save()
+            sold_products = []
             for item_id, item_data in cart.items():
                 try:
                     product = Product.objects.get(id=item_id)
-                    if isinstance(item_data, int):
-                        order_line_item = OrderLineItem(
-                            order=order,
-                            product=product,
+                    if product.availabilty == 'available':
+                        if isinstance(item_data, int):
+                            order_line_item = OrderLineItem(
+                                order=order,
+                                product=product,
+                            )
+                            sold_products.append(product)
+                            order_line_item.save()
+                    else:
+                        messages.error(request, (
+                            f'Sorry, {product} has just been been sold! \
+                            It has been removed from your cart.')
                         )
-                        order_line_item.save()
+                        cart.pop(item_id)
+                        order.delete()
+                        return redirect(reverse('view_cart'))
+
                 except Product.DoesNotExist:
                     messages.error(request, (
                         "The product in your cart is not in our collection anymore! \
@@ -77,6 +89,9 @@ def checkout(request):
                     return redirect(reverse('view_cart'))
 
             request.session['save_info'] = 'save-info' in request.POST
+            for product in sold_products:
+                product.availabilty = 'sold'
+                product.save()
             return redirect(reverse('checkout_success',
                                     args=[order.order_number]))
         else:
