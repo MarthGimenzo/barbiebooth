@@ -386,7 +386,7 @@ input:checked + .slider:before {
     color:#aab7c4;
 }
 
-#id_email,
+#id_email.textinput,
 #id_email2,
 #id_username,
 #id_password1,
@@ -396,7 +396,7 @@ input:checked + .slider:before {
     max-width: 420px !important;
     margin: auto;
 }
-    
+
 
 
 /* Overlay style */
