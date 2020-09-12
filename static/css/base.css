@@ -10,6 +10,11 @@
     font-family: 'DollieScript_PersonalUse';
 }
 
+.dollie-font-big {
+    font-family: 'DollieScript_PersonalUse';
+    font-size: 40px;
+}
+
 /* Elements */
 
 html {
@@ -31,6 +36,10 @@ body {
     background-attachment: scroll;
     color: #9a5366;
     font-family: 'Ubuntu';
+}
+
+.header-height {
+    height: 75%;
 }
 
 /* from Bulma */
