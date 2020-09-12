@@ -17,9 +17,18 @@ html {
 }
 
 body {
-    background: url('/media/homepage_background3.jpg') no-repeat center center fixed;
+    background: url('/media/homepage_background4.jpg') no-repeat center center fixed;
     background-size: cover;
+    background-attachment: scroll;
     height: calc(100vh - 50px);
+    color: #9a5366;
+    font-family: 'Ubuntu';
+}
+
+.bg-stripes {
+    background: url('/media/homepage_background5.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-attachment: scroll;
     color: #9a5366;
     font-family: 'Ubuntu';
 }
@@ -42,6 +51,41 @@ body {
     color: white!important;
     text-shadow: -2px 0 #000, 0 2px #000, 2px 0 #000, 0 -2px #000;
     font-size: 50px;
+}
+
+.big-logo {
+    color: white!important;
+    text-shadow: -2px 0 #000, 0 2px #000, 2px 0 #000, 0 -2px #000;
+    font-size: 70px;
+}
+
+@media (max-width: 767px) {
+    .big-logo {
+        color: white!important;
+        text-shadow: -2px 0 #000, 0 2px #000, 2px 0 #000, 0 -2px #000;
+        font-size: 50px;
+        margin-top: 80px!important;
+    }
+}
+
+.small-header {
+    font-size: 25px;
+}
+
+.p-text {
+    font-size: 16px;
+    max-width: 300px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.header-icons {
+    font-size: 60px;
+    text-shadow: -2px 0 #000, 0 2px #000, 2px 0 #000, 0 -2px #000;
+}
+
+.mypicture {
+    width: 50%;
 }
 
 .navbar,
@@ -74,13 +118,13 @@ body {
 }
 
 .barbie-home-picture {
-    margin-top: 50px;
-    min-height: 70vh;
-    max-height: 80vh;
+    margin-top: 80px;
+    min-height: 30vh;
+    max-height: 50vh;
     object-fit: contain;
-    margin-left: -120px;
-    position: relative;
     z-index: 4;
+    
+    position: relative;
     /* Disabled for dropshadow load times....
     -webkit-filter: drop-shadow(4px 4px 0 #9a5366)
                   drop-shadow(-4px -4px 0 #9a5366);
@@ -90,41 +134,11 @@ body {
 }
 
 .standard {
-    margin-top: 50px;
-    min-height: 70vh;
-    max-height: 80vh;
-    object-fit: contain;
-    margin-left: -120px;
-    position: absolute;
-    z-index: 3;
-    /* Disabled for dropshadow load times....
-    -webkit-filter: drop-shadow(4px 4px 0 #9a5366)
-                  drop-shadow(-4px -4px 0 #9a5366);
-    filter: drop-shadow(4px 4px 0 #9a5366) 
-            drop-shadow(-4px -4px 0 #9a5366);
-    */
-}
-
-@media (min-width: 992px) {
-    .barbie-home-picture {
-        margin-top: 80px;
-        height: 60vh;
-        object-fit: contain;
-        z-index: 4;
-        margin-left: 70px;
-        /* Disabled for dropshadow load times....
-        -webkit-filter: drop-shadow(4px 4px 0 #9a5366)
-                    drop-shadow(-4px -4px 0 #9a5366);
-        filter: drop-shadow(4px 4px 0 #9a5366) 
-                drop-shadow(-4px -4px 0 #9a5366);
-        */
-    }
-
-    .standard {
     margin-top: 80px;
-    height: 60vh;
+    min-height: 30vh;
+    max-height: 50vh;
     object-fit: contain;
-    margin-left: 70px;
+    
     position: absolute;
     z-index: 3;
     /* Disabled for dropshadow load times....
@@ -133,8 +147,9 @@ body {
     filter: drop-shadow(4px 4px 0 #9a5366) 
             drop-shadow(-4px -4px 0 #9a5366);
     */
-    }
 }
+
+
 
 
 

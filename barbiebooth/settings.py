@@ -189,7 +189,7 @@ if 'USE_AWS' in os.environ:
     AWS_STORAGE_BUCKET_NAME = 'barbiebooth'
     AWS_S3_REGION_NAME = 'us-east-1'
     AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
-    AWS_SECRET_ACCESS_KEY_ID = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
     AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
 
     # Static and media files
@@ -207,7 +207,7 @@ if 'USE_AWS' in os.environ:
 STRIPE_CURRENCY = 'usd'
 STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
-STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET')
+STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 
 if 'DEVELOPMENT' in os.environ:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

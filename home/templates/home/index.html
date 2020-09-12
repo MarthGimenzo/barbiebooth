@@ -10,30 +10,63 @@
 {% endblock %}
 
 {% block content %}
-<div class="container-fluid h-100 mt-5">
+<div class="container-fluid h-75 mt-5 d-none d-md-block">
     <div class="row h-100">
-        <div class="col-4 p-0">
-            <div class="pr-4">
+        <div class="col-4 offset-1 col-lg-">
+            <div class="">
                 <img src="{{ MEDIA_URL }}standard.png" id="standard" class="standard" alt="Barbie"/>
             </div>
-            <div class="pr-4 slide-out">
+            <div class="slide-out">
                 <img src="{{ MEDIA_URL }}barbie1.png" id="barbiepicture" class="barbie-home-picture" alt="Barbie"/>
             </div>
         </div>
-        <div class="col-8 text-center half-push-top">
+        <div class="col-5 text-center half-push-top ml-3">
             <h1 class="display-4 mt-5 text-purple dollie-font" id="headertext">
                 "Just take a look at us!"
             </h1>
             <div class="mt-5">
             <h5>
-                <a href="{% url 'products' %}" class="small see-the-button-small rounded-pill px-1 py-1 mr-1">See My Collection!</a>
+                <a href="{% url 'products' %}" class="btn see-the-button rounded-pill px-1 py-1 mr-1">See My Collection!</a>
             </h5>
             </div>
         </div>
     </div>
-    <div class="row bg-light-yellow">
-        <div class="col-10 offset-1">
-           xcvxcvxcvxcvvxc
+</div>
+<div class="container-fluid bg-stripes">
+    <div class="row h-100">
+        <div class="col-10 offset-1 mt-2">
+           <h1 class="my-0 dollie-font big-logo text-center">Barbie Booth</h1>
+           <h3 class="display-4 small-header text-purple dollie-font text-center">
+                Time To Sell My Collection
+            </h3>
+            <p class="text-center p-text"><strong>Welcome to my Barbie Booth!</strong></p>
+            <p class="text-center p-text">I'm Geiske and I have been collecting authentic Barbies launched in the years 1964 to 1972.</p>
+            <p class="text-center p-text">I feel the time has come to sell them, and with this webshop I have the ability to share my passion for collecting Barbies with other collectors. </p>
+            <div class="text-center">
+                <a href="{% url 'products' %}" class="btn see-the-button rounded-pill px-1 py-1 mr-1 d-md-none mt-2">See My Collection!</a>
+                <a href="{% url 'about' %}" class="text-center btn see-the-button rounded-pill px-1 py-1 mr-1 mt-2">About Me</a>
+            </div>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3 offset-1 p-0">
+            <div class="text-center">
+                <i class="text-white header-icons fas fa-globe-europe"></i>
+                <p class="mt-2">WORLDWIDE SHIPPING</p>
+            </div>
+        </div>
+        <div class="col-4 p-0">
+            <div class="text-center">
+                <i class="text-white header-icons fas fa-certificate"></i>
+                <p class="mt-2">100% AUTHENTIC</p>
+            </div>
+        </div>
+        <div class="col-3 p-0">
+            <div class="text-center">
+                <i class="text-white header-icons fas fa-hand-holding-heart"></i>
+                <p class="mt-2">GREAT CONDITION</p>
+            </div>
         </div>
     </div>
 </div>
@@ -75,13 +108,16 @@
                         $("#headertext").text('"I\'d rather go to the moon than being sold"');
                     }
                     else if (barbiePicture == 3) {
-                        $("#barbiepicture").attr("src","{{ MEDIA_URL }}barbie2.png");
+                        $("#barbiepicture").attr("src","{{ MEDIA_URL }}barbie3.png");
+                        $("#headertext").text('"I\'m very expensive you know.."');
                     }
                     else if (barbiePicture == 4) {
-                        $("#barbiepicture").attr("src","{{ MEDIA_URL }}barbie2.png");
+                        $("#barbiepicture").attr("src","{{ MEDIA_URL }}barbie4.png");
+                        $("#headertext").text('"Please don\'t buy me!"');
                     }
                     else {
-                        $("#barbiepicture").attr("src","{{ MEDIA_URL }}barbie2.png");
+                        $("#barbiepicture").attr("src","{{ MEDIA_URL }}barbie5.png");
+                        $("#headertext").text('"I\'m way too gorgeous to be sold!"');
                     }
                     $('.slide-out').ready().show("slide", { direction: "left" }, 500)
                 }, 1000);
