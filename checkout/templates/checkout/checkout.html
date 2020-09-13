@@ -4,6 +4,7 @@
 
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}" type="text/css">
+    <link rel="prefetch" href="RESOURCE_URL">
 {% endblock %}
 
 {% block page_header %}
@@ -25,19 +26,19 @@
         </div>
 
         <div class="row">
-            <div class="col col-sm-12 col-lg-6 order-lg-last mb-5">
+            <div class="col col-sm-12 col-lg-6 order-lg-last mb-5" id="preload-1">
                 <p class="text-purple">What you want to order</p>
                 <div class="row">
-                    <div class="col-7 offset-2">
+                    <div class="col-7 offset-2" id="preload-2">
                         <p class="mb-1 mt-0">Item</p>
                     </div>
-                    <div class="col-3 text-right pr-5">
+                    <div class="col-3 text-right pr-5" id="preload-3">
                         <p class="mb-1 mt-0">Price</p>
                     </div>
                 </div>
                 {% for item in cart_items %}
                     <div class="row">
-                        <div class="col-2 mb-1">
+                        <div class="col-2 mb-1" id="preload-4">
                             <a href="{% url 'product_detail' item.product.id %}">
                                 {% if item.product.image %}
                                     <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}">
@@ -130,11 +131,14 @@
         </div>
     </div>
     <!-- Loading spinner -->
-    <div id="loading-overlay">
-        <h1 class="text-purple loading-spinner">
-            <span class="icon">
-                <i class="fas fa-3x fa-running fa-spin"></i>
-            </span>
+    <div class="text-center" id="loading-overlay">
+        <h1 class="text-purple dollie-font-gigantic mt-4">
+            <div class="super-push-top">
+                <span class="mt-4">
+                    Just A Moment..<br>
+                    Processing Your Transaction...
+                </span>
+            </div>
         </h1>
     </div>
 {% endblock %}

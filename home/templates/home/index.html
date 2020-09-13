@@ -66,12 +66,7 @@
                 barbiePicture = 1
             }
             setTimeout(
-                function() 
-                {
-                    console.log('Wait 2 seconds before slide in')
-
-                    console.log(barbiePicture)
-
+                function() {
                     if (barbiePicture == 1) {
                         $("#barbiepicture").attr("src","{{ MEDIA_URL }}barbie1.png");
                         $("#headertext").text('"Just take look at us!"')
@@ -95,15 +90,6 @@
                     $('.slide-out').ready().show("slide", { direction: "left" }, 500)
                 }, 1000);
             ;
-            
-            
-            
         }, 10000 );
-
-        
-           // SlideBarbieOut().then(SlideBarbieIn());     
-        
-        
-        
     </script>
 {% endblock %}

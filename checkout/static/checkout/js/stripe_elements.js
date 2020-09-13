@@ -31,6 +31,53 @@ var style = {
 var card = elements.create('card', {style: style});
 card.mount('#card-element');
 
+backgroundChanger();
+function backgroundChanger() {
+    var backgroundPicture = 1
+    console.log('One time setting of backgroundpicture')
+    $('#loading-overlay').css("background-image", "url(/media/loader1.jpg");  
+    $('#loading-overlay').css("background-image", "url(/media/loader2.jpg");  
+    $('#loading-overlay').css("background-image", "url(/media/loader3.jpg");  
+    $('#loading-overlay').css("background-image", "url(/media/loader4.jpg");  
+    setInterval(function(){
+        backgroundPicture += 1
+        if (backgroundPicture > 4) {
+            console.log('if picture picture is 4')
+            backgroundPicture = 1
+        }
+        setTimeout(
+            function() {
+                if (backgroundPicture == 1) {
+                    console.log('Set picture 1')
+                    
+                    $('#loading-overlay').css("background-image", "url(/media/loader1.jpg");  
+                    
+                }
+                else if (backgroundPicture == 2) {
+                    console.log('Set picture 2')
+                    
+                    $('#loading-overlay').css("background-image", "url(/media/loader2.jpg");  
+                    
+                }
+                else if (backgroundPicture == 3) {
+                    console.log('Set picture 3')
+                    
+                    $('#loading-overlay').css("background-image", "url(/media/loader3.jpg");  
+                    
+                }
+                else {
+                    console.log('Set picture 4')
+                    
+                    $('#loading-overlay').css("background-image", "url(/media/loader4.jpg");  
+                }
+                
+            }, 0);
+        ;
+    }, 350 );
+}
+
+
+
 // Handle validation errors on the card element
 card.addEventListener('change', function (event) {
     var errorDiv = document.getElementById('card-errors');
@@ -120,3 +167,5 @@ form.addEventListener('submit', function(ev) {
         location.reload();	
     })
 });
+
+
