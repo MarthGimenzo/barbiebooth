@@ -33,41 +33,23 @@
     </div>
 </div>
 <div class="container-fluid bg-stripes">
+    <img src="{{ MEDIA_URL }}barbieupsidedown.png" class="upside-down-barbie d-md-none" alt="Barbie">
     <div class="row h-100">
         <div class="col-10 offset-1 mt-2">
-           <h1 class="my-0 dollie-font big-logo text-center">Barbie Booth</h1>
+           <h1 class="mt-0 dollie-font big-logo text-center">Barbie Booth</h1>
            <h3 class="display-4 small-header text-purple dollie-font text-center">
                 Time To Sell My Collection
             </h3>
             <p class="text-center p-text"><strong>Welcome to my Barbie Booth!</strong></p>
             <p class="text-center p-text">I'm Geiske and I have been collecting authentic Barbies launched in the years 1964 to 1972.</p>
             <p class="text-center p-text">I feel the time has come to sell them, and with this webshop I have the ability to share my passion for collecting Barbies with other collectors. </p>
-            <div class="text-center">
+            <div class="text-center mb-4">
                 <a href="{% url 'products' %}" class="btn see-the-button rounded-pill px-1 py-1 mr-1 d-md-none mt-2">See My Collection!</a>
                 <a href="{% url 'about' %}" class="text-center btn see-the-button rounded-pill px-1 py-1 mr-1 mt-2">About Me</a>
             </div>
         </div>
     </div>
-    <div class="row mt-3 h-100">
-        <div class="col-3 offset-1 p-0">
-            <div class="text-center">
-                <i class="text-white header-icons fas fa-globe-europe"></i>
-                <p class="mt-2">WORLDWIDE SHIPPING</p>
-            </div>
-        </div>
-        <div class="col-4 p-0">
-            <div class="text-center">
-                <i class="text-white header-icons fas fa-certificate"></i>
-                <p class="mt-2">100% AUTHENTIC</p>
-            </div>
-        </div>
-        <div class="col-3 p-0">
-            <div class="text-center">
-                <i class="text-white header-icons fas fa-hand-holding-heart"></i>
-                <p class="mt-2">GREAT CONDITION</p>
-            </div>
-        </div>
-    </div>
+    
 </div>
 {% endblock %}
 
