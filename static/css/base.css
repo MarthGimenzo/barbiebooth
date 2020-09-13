@@ -88,6 +88,14 @@ body {
     margin-bottom: 20px;
 }
 
+.p-par {
+    font-size: 16px;
+    margin: auto;
+    margin-bottom: 20px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
 .header-icons {
     font-size: 60px;
     text-shadow: -2px 0 #000, 0 2px #000, 2px 0 #000, 0 -2px #000;
