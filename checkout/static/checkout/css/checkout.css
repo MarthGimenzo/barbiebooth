@@ -69,8 +69,8 @@ select option[value=""] {
     height: 70%;
     margin-top: 10%;
     background: url('/media/loader1.jpg');
-    background-size: cover;
-    background-position: center center;
+    background-size: cover!important;
+    background-position: center center!important;
     z-index: 9999;
     border-top: 5px solid #9a5366;
     border-bottom: 5px solid #9a5366;

@@ -152,10 +152,10 @@
     function backgroundChanger() {
         var backgroundPicture = 1
         console.log('One time setting of backgroundpicture')
-        $('#loading-overlay').css("background", "{{ MEDIA_URL }}loader1.jpg");  
-        $('#loading-overlay').css("background", "{{ MEDIA_URL }}loader2.jpg");  
-        $('#loading-overlay').css("background", "{{ MEDIA_URL }}loader3.jpg");  
-        $('#loading-overlay').css("background", "{{ MEDIA_URL }}loader4.jpg");  
+        $('#loading-overlay').css("background", "url({{ MEDIA_URL }}loader1.jpg)");  
+        $('#loading-overlay').css("background", "url({{ MEDIA_URL }}loader2.jpg)");  
+        $('#loading-overlay').css("background", "url({{ MEDIA_URL }}loader3.jpg)");  
+        $('#loading-overlay').css("background", "url({{ MEDIA_URL }}loader4.jpg)");  
         setInterval(function(){
             backgroundPicture += 1
             if (backgroundPicture > 4) {
@@ -166,26 +166,26 @@
                     if (backgroundPicture == 1) {
                         console.log('Set picture 1')
                         
-                        $('#loading-overlay').css("background", "{{ MEDIA_URL }}loader1.jpg");
+                        $('#loading-overlay').css("background", "url({{ MEDIA_URL }}loader1.jpg)");
                         console.log("{{ MEDIA_URL }}loader1.jpg")
                         
                     }
                     else if (backgroundPicture == 2) {
                         console.log('Set picture 2')
                         
-                        $('#loading-overlay').css("background", "{{ MEDIA_URL }}loader2.jpg");  
+                        $('#loading-overlay').css("background", "url({{ MEDIA_URL }}loader2.jpg)");  
                         
                     }
                     else if (backgroundPicture == 3) {
                         console.log('Set picture 3')
                         
-                        $('#loading-overlay').css("background", "{{ MEDIA_URL }}loader3.jpg");  
+                        $('#loading-overlay').css("background", "url({{ MEDIA_URL }}loader3.jpg)");  
                         
                     }
                     else {
                         console.log('Set picture 4')
                         
-                        $('#loading-overlay').css("background", "{{ MEDIA_URL }}loader4.jpg");  
+                        $('#loading-overlay').css("background", "url({{ MEDIA_URL }}loader4.jpg)");  
                     }
                     
                 }, 0);
