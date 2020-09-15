@@ -27,13 +27,13 @@
 
         <div class="row">
             <div class="col col-sm-12 col-lg-6 order-lg-last mb-5" id="preload-1">
-                <p class="text-purple">What you want to order</p>
+                <p class="dollie-font-big text-purple">Your Order</p>
                 <div class="row">
                     <div class="col-7 offset-2" id="preload-2">
-                        <p class="mb-1 mt-0">Item</p>
+                        <p class="mb-1 mt-0"><strong>Item</strong></p>
                     </div>
                     <div class="col-3 text-right pr-5" id="preload-3">
-                        <p class="mb-1 mt-0">Price</p>
+                        <p class="mb-1 mt-0"><strong>Price</strong></p>
                     </div>
                 </div>
                 {% for item in cart_items %}
@@ -71,16 +71,16 @@
                 </div>
             </div>
             <div class="col-sm-12 col-lg-6 order-lg-last">
-                <p class="text-purple">Please enter the details of your order</p>
+                <p class="dollie-font-big text-purple">Information</p>
                 <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                     {% csrf_token %}
                     <fieldset class="px-3 mb-2">
-                        <legend class="fieldset-label text-purple px-2">Details</legend>
+                        <legend class="dollie-font-big fieldset-label text-purple px-2">Details</legend>
                         {{ order_form.full_name | as_crispy_field }}
                         {{ order_form.email | as_crispy_field }}
                     </fieldset>
                     <fieldset class="rounded px-3 mb-2">
-                        <legend class="fieldset-label text-purple px-2">Delivery</legend>
+                        <legend class="dollie-font-big fieldset-label text-purple px-2">Delivery</legend>
                         {{ order_form.phone_number | as_crispy_field }}
                         {{ order_form.street_address1 | as_crispy_field }}
                         {{ order_form.street_address2 | as_crispy_field }}
@@ -101,7 +101,7 @@
                         </div>
                     </fieldset>
                     <fieldset class="rounded-pill px-3 mb-2">
-                        <legend class="fieldset-label text-purple px-2 w-auto">Payment</legend>
+                        <legend class="dollie-font-big fieldset-label text-purple px-2 w-auto">Payment</legend>
                         <div class="mb-3" id="card-element"></div>
                         <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
                         <input type="hidden" value="{{ client_secret }}" name="client_secret">

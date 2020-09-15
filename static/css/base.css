@@ -35,6 +35,13 @@ body {
     font-family: 'Ubuntu';
     position: relative;
 }
+.semi-fill-page {
+    margin-bottom: 15vh;
+}
+
+.fill-page {
+    margin-bottom: 50vh;
+}
 
 .bg-stripes {
     background: url('/media/homepage_background5.jpg') no-repeat center center fixed;
