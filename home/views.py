@@ -24,10 +24,12 @@ def contact(request):
     if request.method == 'POST':
         f = ContactForm(request.POST)
         if f.is_valid():
+            messages.success(request, 'Your comment has been posted.')
             f.save()
             messages.success(request, 'Your comment has been posted.')
             print('Successfully posted')
             return redirect('contact')
+            messages.success(request, 'Your comment has been posted.')
     else:
         f = ContactForm()
     return render(request, 'home/contact.html', {'form': f})
