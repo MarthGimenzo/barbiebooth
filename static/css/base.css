@@ -349,6 +349,20 @@ body {
     max-height: 100px !important;
 }
 
+.contactform {
+    border: 5px solid #9a5366 !important;
+    max-height: 100px !important;
+    min-width: 100%;
+    border-radius: 34px!important;
+}
+
+.messagefield {
+    border: 5px solid #9a5366 !important;
+    max-height: 100px !important;
+    min-width: 100%;
+    border-radius: 10px!important;
+}
+
 /* Slider from W3schools */
 
 /* The switch - the box around the slider */

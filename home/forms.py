@@ -1,14 +1,13 @@
-from django.forms import ModelForm, Textarea
 from django import forms
-from .models import Comment
+from .models import Contact
 
 
-class CommentForm(forms.ModelForm):
+class ContactForm(forms.ModelForm):
 
     class Meta:
-        model = Comment
-        fields = ['name', 'description']
-
+        model = Contact
+        fields = '__all__'
+    
     def __init__(self, *args, **kwargs):
         """
         Add placeholders and classes, remove auto-generated
@@ -18,7 +17,9 @@ class CommentForm(forms.ModelForm):
         """
         super().__init__(*args, **kwargs)
 
-        self.fields['description'].widget.attrs['autofocus'] = False
         for field in self.fields:
-            self.fields[field].widget.attrs['class'] = 'commentform'
+            self.fields[field].widget.attrs['class'] = 'contactform'
+            self.fields[field].widget.attrs['cols'] = 25
+            if field == 'message':
+                self.fields[field].widget.attrs['class'] = 'messagefield'
             self.fields[field].label = False

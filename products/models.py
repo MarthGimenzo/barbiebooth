@@ -7,7 +7,7 @@ class Category(models.Model):
         verbose_name_plural = 'Categories'
 
     name = models.CharField(max_length=254)
-    friendly_name = models.CharField(max_length=254, blank=True)
+    friendly_name = models.CharField(max_length=254, null=True, blank=True)
     # created_date = models.DateTimeField(auto_now_add=True)
     # edited_date = models.DateTimeField(auto_now=True)
 
@@ -27,17 +27,17 @@ AVAILABILITY = (
 
 class Product(models.Model):
     category = models.ForeignKey('Category', null=True, blank=True,
-                                 on_delete=models.SET_NULL)
-    sku = models.CharField(max_length=254, blank=True)
+                                 on_delete=models.SET_NULL, default='barbie')
+    sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
     description = models.TextField()
     views = models.IntegerField(default=0)
-    year = models.CharField(max_length=5, blank=True)
+    year = models.CharField(max_length=5, null=True, blank=True)
     price = models.DecimalField(max_digits=6, decimal_places=2)
     condition = models.DecimalField(max_digits=6, decimal_places=2,
                                     null=True, blank=True)
-    image_url = models.URLField(max_length=1024, blank=True)
-    image = models.ImageField(blank=True)
+    image_url = models.URLField(max_length=1024, null=True, blank=True)
+    image = models.ImageField(null=True, blank=True)
     availabilty = models.CharField(max_length=50, default='available',
                                    choices=AVAILABILITY)
 

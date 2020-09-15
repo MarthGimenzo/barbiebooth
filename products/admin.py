@@ -26,6 +26,7 @@ class CategoryAdmin(admin.ModelAdmin):
         'name',
     )
 
+
 class CommentAdmin(admin.ModelAdmin):
     list_display = (
         'name',
