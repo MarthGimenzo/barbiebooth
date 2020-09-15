@@ -33,6 +33,7 @@ body {
     height: calc(100vh - 50px);
     color: #9a5366;
     font-family: 'Ubuntu';
+    position: relative;
 }
 
 .bg-stripes {
@@ -447,6 +448,9 @@ input:checked + .slider:before {
     max-width: 420px !important;
     margin: auto;
 }
+
+
+
 
 
 
