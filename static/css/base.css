@@ -188,11 +188,6 @@ body {
     */
 }
 
-
-
-
-
-
 .btn-purple {
     background: #fff568!important;
     color: #9a5366!important;
@@ -231,7 +226,6 @@ body {
     padding: 5px;
 }
 
-
 @media (max-width: 991px) {
     .see-the-button-small {
     background: #fff568;
@@ -245,15 +239,12 @@ body {
     }
 }
 
-
-
 @media (max-width: 991px) {
     .logo-size {
     
     font-size: 30px;
     }
 }
-
 
 .see-the-button:hover,
 .see-the-button:active,
@@ -486,11 +477,6 @@ input:checked + .slider:before {
     max-width: 420px !important;
     margin: auto;
 }
-
-
-
-
-
 
 /* Overlay style */
 
