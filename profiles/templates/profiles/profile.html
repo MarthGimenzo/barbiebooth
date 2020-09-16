@@ -31,7 +31,7 @@
             </div>
             <div class="col-12 col-lg-6 semi-fill-page">
                 <p class="dollie-font-big text-muted text-purple">Order History</p>
-                 <div class="order-history table-responsive rounded border-purple bg-light-pink">
+                 <div class="order-history table-responsive rounded border-purple bg-light-mint">
                     <table class="table text-purple table-sm table-borderless">
                         <thead>
                             <tr>
@@ -44,7 +44,7 @@
                         <tbody>
                             {% for order in orders %}
                                 
-                                <tr class="{% if forloop.counter|divisibleby:2 %}bg-light-mint{% else %}bg-light-yellow{% endif %}">
+                                <tr class="{% if forloop.counter|divisibleby:2 %}bg-light-pink{% else %}bg-light-yellow{% endif %}">
                                     <td>
                                         <a href="{% url 'order_history' order.order_number %}"
                                         title="{{ order.order_number }}">
