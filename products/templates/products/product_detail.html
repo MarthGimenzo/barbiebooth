@@ -79,21 +79,27 @@
         </div>
         
         <div class="row">
-            {% for comment in comments %}
-            {% if comment.name == 'GeiskeZijlstra' %}
-            <div class="col-9 offset-1 rounded border-purple bg-light-pink mb-1">
-                <p class="text-purple mt-3 mb-0 pl-2"><strong>Geiske Zijlstra:</strong> | <small>{{ comment.created_date }}</small></p>
-                <hr class="mt-0 mb-0">
-                <p class="text-purple mb-3 pl-2">{{ comment.description }}</p>
-            </div>
+            {% if comments %}
+                {% for comment in comments %}
+                {% if comment.name == 'GeiskeZijlstra' %}
+                <div class="col-9 offset-1 rounded border-purple bg-light-pink mb-1">
+                    <p class="text-purple mt-3 mb-0 pl-2"><strong>Geiske Zijlstra:</strong> | <small>{{ comment.created_date }}</small></p>
+                    <hr class="mt-0 mb-0">
+                    <p class="text-purple mb-3 pl-2">{{ comment.description }}</p>
+                </div>
+                {% else %}
+                <div class="col-9 offset-2 rounded border-purple bg-light-yellow mb-1">
+                    <p class="text-purple mt-3 mb-0 pl-2"><strong>{{ comment.name }}</strong> | <small>{{ comment.created_date }}</small></p>
+                    <hr class="mt-0 mb-0">
+                    <p class="text-purple mb-3 pl-2">{{ comment.description }}</p>
+                </div>
+                {% endif %}
+                {% endfor%}
             {% else %}
-            <div class="col-9 offset-2 rounded border-purple bg-light-yellow mb-1">
-                <p class="text-purple mt-3 mb-0 pl-2"><strong>{{ comment.name }}</strong> | <small>{{ comment.created_date }}</small></p>
-                <hr class="mt-0 mb-0">
-                <p class="text-purple mb-3 pl-2">{{ comment.description }}</p>
+            <div class="col-10 text-center offset-1">
+                <p class="text-purple">No comments have been posted yet, be the first!</p>
             </div>
             {% endif %}
-            {% endfor%}
             <hr class="">
         </div>
         <div class="row mb-5 mt-1">
