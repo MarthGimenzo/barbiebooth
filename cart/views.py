@@ -11,6 +11,7 @@ def view_cart(request):
 
     return render(request, 'cart/cart.html')
 
+
 def add_to_cart(request, item_id):
     """Add a a product to the cart"""
 

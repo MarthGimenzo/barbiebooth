@@ -1,7 +1,6 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse
 from django.contrib import messages
 from .forms import ContactForm
-
 
 
 # Create your views here.
@@ -24,12 +23,10 @@ def contact(request):
     if request.method == 'POST':
         f = ContactForm(request.POST)
         if f.is_valid():
-            messages.success(request, 'Your comment has been posted.')
             f.save()
-            messages.success(request, 'Your comment has been posted.')
-            print('Successfully posted')
-            return redirect('contact')
-            messages.success(request, 'Your comment has been posted.')
+            messages.info(request, 'Your contactform has been submitted.\
+                I will respond to you as soon as possible!')
+            return redirect(reverse('contact'))
     else:
         f = ContactForm()
     return render(request, 'home/contact.html', {'form': f})
@@ -37,7 +34,8 @@ def contact(request):
 
 def faqs(request):
     """A view to return the faqs page"""
-
+    messages.info(request, 'Your contactform has been submitted.\
+                I will respond to you as soon as possible!')
     return render(request, 'home/faqs.html')
 
 

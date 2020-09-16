@@ -7,7 +7,7 @@ class ContactForm(forms.ModelForm):
     class Meta:
         model = Contact
         fields = '__all__'
-    
+
     def __init__(self, *args, **kwargs):
         """
         Add placeholders and classes, remove auto-generated
@@ -20,6 +20,6 @@ class ContactForm(forms.ModelForm):
         for field in self.fields:
             self.fields[field].widget.attrs['class'] = 'contactform'
             self.fields[field].widget.attrs['cols'] = 25
-            if field == 'message':
+            if field == 'description':
                 self.fields[field].widget.attrs['class'] = 'messagefield'
             self.fields[field].label = False

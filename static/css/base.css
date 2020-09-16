@@ -550,6 +550,8 @@ input:checked + .slider:before {
     z-index: 99999999999;
 }
 
+
+
 .custom-toast {
     overflow: visible;
 }
