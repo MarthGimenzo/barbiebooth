@@ -44,7 +44,7 @@ body {
 }
 
 .bg-stripes {
-    background: url('/media/homepage_background5.jpg') no-repeat center center fixed;
+    background: url('/media/homepage_background6.jpg') no-repeat center center fixed;
     background-size: cover;
     background-attachment: scroll;
     color: #9a5366;
@@ -53,6 +53,10 @@ body {
 
 .header-height {
     height: 75%;
+}
+
+.header-shadow {
+    text-shadow: 2px 2px 5px #fffea7;
 }
 
 /* from Bulma */
