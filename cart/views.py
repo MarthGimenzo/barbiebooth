@@ -25,7 +25,8 @@ def add_to_cart(request, item_id):
         cart[item_id] = quantity
 
     else:
-        messages.warning(request, f'You already have {product.name} in your cart!')
+        messages.warning(request, f'You already have \
+                         {product.name} in your cart!')
 
     request.session['cart'] = cart
     return redirect(redirect_url)
@@ -38,9 +39,11 @@ def remove_from_cart(request, item_id):
         cart = request.session.get('cart', {})
         cart.pop(item_id)
         request.session['cart'] = cart
-        messages.warning(request, f'You removed {product.name} from your cart!')
+        messages.warning(request, f'You removed \
+                         {product.name} from your cart!')
         return HttpResponse(status=200)
 
     except Exception as e:
-        messages.error(request, f"Removing {product.name} from your cart didn't work!")
+        messages.error(request, f"Removing {product.name}\
+                       from your cart didn't work!")
         return HttpResponse(status=500)

@@ -3,156 +3,148 @@
 {% load static %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}" type="text/css">
-    <link rel="prefetch" href="RESOURCE_URL">
+<link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}" type="text/css">
+<link rel="prefetch" href="RESOURCE_URL">
 {% endblock %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
 {% endblock %}
 
 {% block content %}
-    <div class="overlay"></div>
-    <div class="container push-top">
-        <div class="row">
-            <div class="col">
-                <h2 class="dollie-font-big mb-4 text-center">Checking Out</h2>
-                <hr class="w-75 mb-1">
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col col-sm-12 col-lg-6 order-lg-last mb-5">
-                <p class="dollie-font-big text-purple">Your Order</p>
-                <div class="row bg-light-mint rounded-top border-purple-top">
-                    <div class="col-7 offset-2">
-                        <p class="mb-1 mt-0"><strong>Item</strong></p>
-                    </div>
-                    <div class="col-3 text-right pr-5">
-                        <p class="mb-1 mt-0"><strong>Price</strong></p>
-                    </div>
-                </div>
-                {% for item in cart_items %}
-                    <div class="row {% if forloop.counter|divisibleby:2 %}bg-light-pink{% else %}bg-light-yellow{% endif %} border-purple-x">
-                        <div class="col-2 mb-1 mt-2">
-                            <a href="{% url 'product_detail' item.product.id %}">
-                                {% if item.product.image %}
-                                    <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}">
-                                {% else %}
-                                    <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                                {% endif %}
-                            </a>
-                        </div>
-                        <div class="col-7 text-purple">
-                            <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                            <p class="small my-0">Year: {{ item.product.year }}</p>
-                        </div>
-                        <div class="col-3 text-right pr-5">
-                            <p class="my-0">${{ item.product.price }}</p>
-                        </div>
-                        
-                    </div>
-                {% endfor %}
-                
-                <div class="row text-purple text-right bg-light-mint rounded-bottom border-purple-bottom">
-                    <div class="col-7 offset-2">
-                        <p class="my-0">Order Total:</p>
-                        <p class="my-0">Delivery:</p>
-                        <p class="my-0">Grand Total:</p>
-                    </div>
-                    <div class="col-3 pr-5">
-                        <p class="my-0">${{ total | floatformat:2 }}</p>
-                        <p class="my-0">$5.00</p>
-                        <p class="my-0"><strong>${{ grand_total | floatformat:2 }}</strong></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-lg-6 order-lg-last">
-                <p class="dollie-font-big text-purple">Information</p>
-                <form action="{% url 'checkout' %}" method="POST" id="payment-form">
-                    {% csrf_token %}
-                    <fieldset class="px-3 mb-2">
-                        <legend class="dollie-font-big fieldset-label text-purple px-2">Details</legend>
-                        {{ order_form.full_name | as_crispy_field }}
-                        {{ order_form.email | as_crispy_field }}
-                    </fieldset>
-                    <fieldset class="rounded px-3 mb-2">
-                        <legend class="dollie-font-big fieldset-label text-purple px-2">Delivery</legend>
-                        {{ order_form.phone_number | as_crispy_field }}
-                        {{ order_form.street_address1 | as_crispy_field }}
-                        {{ order_form.street_address2 | as_crispy_field }}
-                        {{ order_form.town_or_city | as_crispy_field }}
-                        {{ order_form.postcode | as_crispy_field }}
-                        {{ order_form.county | as_crispy_field }}
-                        {{ order_form.country | as_crispy_field }}
-                        <div class="form-check form-check-inline float-right mr-0">
-                            {% if user.is_authenticated %}
-                                <label class="form-check-label" for="id-save-info">Save this information!</label>
-                                <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
-                            {% else %}
-                                <label class="form-check-label" for="id-save-info">
-                                    <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or
-                                    <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information.
-                                </label>
-                            {% endif %}
-                        </div>
-                    </fieldset>
-                    <fieldset class="rounded-pill px-3 mb-2">
-                        <legend class="dollie-font-big fieldset-label text-purple px-2 w-auto">Payment</legend>
-                        <div class="mb-3" id="card-element"></div>
-                        <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
-                        <input type="hidden" value="{{ client_secret }}" name="client_secret">
-                    </fieldset>
-                    <div class="text-center mt-2 mb-2">                    
-						<a href="{% url 'view_cart' %}" class="btn rounded-pill see-the-button mt-1">
-							<span class="icon">
-								<i class="fas fa-chevron-left"></i>
-							</span>
-							<span class="font-weight-bold">Adjust Cart</span>
-						</a>
-						<button id="submit-button" class="btn rounded-pill see-the-button mt-1">
-							<span class="font-weight-bold">Complete Order</span>
-							<span class="icon">
-								<i class="fas fa-lock"></i>
-							</span>
-						</button>
-						<p class="text-danger mt-0 mb-5">
-							<span class="icon">
-								<i class="fas fa-exclamation-circle"></i>
-							</span>
-							<span>Your card will be charged <strong>${{ grand_total|floatformat:2 }}</strong></span>
-						</p>
-					</div>
-                </form>
-            </div>
+<div class="overlay"></div>
+<div class="container push-top">
+    <div class="row">
+        <div class="col">
+            <h2 class="dollie-font-big mb-4 text-center">Checking Out</h2>
+            <hr class="w-75 mb-1">
         </div>
     </div>
-    <!-- Loading spinner -->
-    <div class="text-center" id="loading-overlay">
-        <h1 class="text-purple dollie-font-gigantic mt-4">
-            <div class="super-push-top">
-                <span class="mt-4">
-                    Just A Moment..<br>
-                    Processing Your Transaction...
-                </span>
+    <div class="row">
+        <div class="col col-sm-12 col-lg-6 order-lg-last mb-5">
+            <p class="dollie-font-big text-purple">Your Order</p>
+            <div class="row bg-light-mint rounded-top border-purple-top">
+                <div class="col-7 offset-2">
+                    <p class="mb-1 mt-0"><strong>Item</strong></p>
+                </div>
+                <div class="col-3 text-right pr-5">
+                    <p class="mb-1 mt-0"><strong>Price</strong></p>
+                </div>
             </div>
-        </h1>
+            {% for item in cart_items %}
+            <div class="row {% if forloop.counter|divisibleby:2 %}bg-light-pink{% else %}bg-light-yellow{% endif %} border-purple-x">
+                <div class="col-2 mb-1 mt-2">
+                    <a href="{% url 'product_detail' item.product.id %}">
+                        {% if item.product.image %}
+                        <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}">
+                        {% else %}
+                        <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                        {% endif %}
+                    </a>
+                </div>
+                <div class="col-7 text-purple">
+                    <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                    <p class="small my-0">Year: {{ item.product.year }}</p>
+                </div>
+                <div class="col-3 text-right pr-5">
+                    <p class="my-0">${{ item.product.price }}</p>
+                </div>
+            </div>
+            {% endfor %}
+            <div class="row text-purple text-right bg-light-mint rounded-bottom border-purple-bottom">
+                <div class="col-7 offset-2">
+                    <p class="my-0">Order Total:</p>
+                    <p class="my-0">Delivery:</p>
+                    <p class="my-0">Grand Total:</p>
+                </div>
+                <div class="col-3 pr-5">
+                    <p class="my-0">${{ total | floatformat:2 }}</p>
+                    <p class="my-0">$5.00</p>
+                    <p class="my-0"><strong>${{ grand_total | floatformat:2 }}</strong></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-lg-6 order-lg-last">
+            <p class="dollie-font-big text-purple">Information</p>
+            <form action="{% url 'checkout' %}" method="POST" id="payment-form">
+                {% csrf_token %}
+                <fieldset class="px-3 mb-2">
+                    <legend class="dollie-font-big fieldset-label text-purple px-2">Details</legend>
+                    {{ order_form.full_name | as_crispy_field }}
+                    {{ order_form.email | as_crispy_field }}
+                </fieldset>
+                <fieldset class="rounded px-3 mb-2">
+                    <legend class="dollie-font-big fieldset-label text-purple px-2">Delivery</legend>
+                    {{ order_form.phone_number | as_crispy_field }}
+                    {{ order_form.street_address1 | as_crispy_field }}
+                    {{ order_form.street_address2 | as_crispy_field }}
+                    {{ order_form.town_or_city | as_crispy_field }}
+                    {{ order_form.postcode | as_crispy_field }}
+                    {{ order_form.county | as_crispy_field }}
+                    {{ order_form.country | as_crispy_field }}
+                    <div class="form-check form-check-inline float-right mr-0">
+                        {% if user.is_authenticated %}
+                        <label class="form-check-label" for="id-save-info">Save this information!</label>
+                        <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
+                        {% else %}
+                        <label class="form-check-label" for="id-save-info">
+                        <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or
+                        <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information.
+                        </label>
+                        {% endif %}
+                    </div>
+                </fieldset>
+                <fieldset class="rounded-pill px-3 mb-2">
+                    <legend class="dollie-font-big fieldset-label text-purple px-2 w-auto">Payment</legend>
+                    <div class="mb-3" id="card-element"></div>
+                    <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+                    <input type="hidden" value="{{ client_secret }}" name="client_secret">
+                </fieldset>
+                <div class="text-center mt-2 mb-2">
+                    <a href="{% url 'view_cart' %}" class="btn rounded-pill see-the-button mt-1">
+                    <span class="icon">
+                    <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span class="font-weight-bold">Adjust Cart</span>
+                    </a>
+                    <button id="submit-button" class="btn rounded-pill see-the-button mt-1">
+                    <span class="font-weight-bold">Complete Order</span>
+                    <span class="icon">
+                    <i class="fas fa-lock"></i>
+                    </span>
+                    </button>
+                    <p class="text-danger mt-0 mb-5">
+                        <span class="icon">
+                        <i class="fas fa-exclamation-circle"></i>
+                        </span>
+                        <span>Your card will be charged <strong>${{ grand_total|floatformat:2 }}</strong></span>
+                    </p>
+                </div>
+            </form>
+        </div>
     </div>
+</div>
+<!-- Loading Overlay when checking out -->
+<div class="text-center" id="loading-overlay">
+    <h1 class="text-purple dollie-font-gigantic mt-4">
+        <div class="super-push-top">
+            <span class="mt-4">
+            Just A Moment..<br>
+            Processing Your Transaction...
+            </span>
+        </div>
+    </h1>
+</div>
 {% endblock %}
 
 {% block postloadjs %}
-    {{ block.super }}
-    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
-    {{ client_secret|json_script:"id_client_secret" }}
-    <script>
+{{ block.super }}
+{{ stripe_public_key|json_script:"id_stripe_public_key" }}
+{{ client_secret|json_script:"id_client_secret" }}
+<script>
+    // Animated background for processing transaction (Loading Overlay)
     backgroundChanger();
     function backgroundChanger() {
         var backgroundPicture = 1
-        console.log('One time setting of backgroundpicture')
         $('#loading-overlay').css("background", "url({{ MEDIA_URL }}loader1.jpg)");  
         $('#loading-overlay').css("background", "url({{ MEDIA_URL }}loader2.jpg)");  
         $('#loading-overlay').css("background", "url({{ MEDIA_URL }}loader3.jpg)");  
@@ -165,35 +157,21 @@
             setTimeout(
                 function() {
                     if (backgroundPicture == 1) {
-                        console.log('Set picture 1')
-                        
                         $('#loading-overlay').css("background", "url({{ MEDIA_URL }}loader1.jpg)");
-                        console.log("{{ MEDIA_URL }}loader1.jpg")
-                        
                     }
                     else if (backgroundPicture == 2) {
-                        console.log('Set picture 2')
-                        
-                        $('#loading-overlay').css("background", "url({{ MEDIA_URL }}loader2.jpg)");  
-                        
+                        $('#loading-overlay').css("background", "url({{ MEDIA_URL }}loader2.jpg)");
                     }
                     else if (backgroundPicture == 3) {
-                        console.log('Set picture 3')
-                        
-                        $('#loading-overlay').css("background", "url({{ MEDIA_URL }}loader3.jpg)");  
-                        
+                        $('#loading-overlay').css("background", "url({{ MEDIA_URL }}loader3.jpg)");
                     }
                     else {
-                        console.log('Set picture 4')
-                        
-                        $('#loading-overlay').css("background", "url({{ MEDIA_URL }}loader4.jpg)");  
+                        $('#loading-overlay').css("background", "url({{ MEDIA_URL }}loader4.jpg)");
                     }
-                    
                 }, 0);
             ;
         }, 200 );
     }
-    </script>
-    <script src="{% static 'checkout/js/stripe_elements.js' %}">
-    </script>
+</script>
+<script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 {% endblock %}

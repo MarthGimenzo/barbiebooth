@@ -1,5 +1,4 @@
 from django.db import models
-from django.contrib.auth.models import User
 
 
 class Category(models.Model):
@@ -8,8 +7,6 @@ class Category(models.Model):
 
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
-    # created_date = models.DateTimeField(auto_now_add=True)
-    # edited_date = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.name
@@ -41,22 +38,8 @@ class Product(models.Model):
     availabilty = models.CharField(max_length=50, default='available',
                                    choices=AVAILABILITY)
 
-    # created_date = models.DateTimeField(auto_now_add=True)
-    # edited_date = models.DateTimeField(auto_now=True)
-
     def __str__(self):
         return self.name
-
-# class ProductImage(models.Model):
-#     product = models.ForeignKey('Product', null=True, blank=True,
-#                                 on_delete=models.SET_NULL)
-#     image_url = models.URLField(max_length=1024, null=True, blank=True)
-#     image = models.ImageField(null=True, blank=True)
-#     created_date = models.DateTimeField(auto_now_add=True)
-#     edited_date = models.DateTimeField(auto_now=True)
-
-#     def __str__(self):
-#         return self.image
 
 
 class Comment(models.Model):

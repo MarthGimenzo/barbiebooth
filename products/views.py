@@ -17,7 +17,6 @@ def all_products(request):
     categories = None
     sort = None
     direction = None
-    available = True
 
     if request.GET:
         if 'sort' in request.GET:
@@ -70,7 +69,7 @@ def product_detail(request, product_id):
     if request.POST:
         comment = Comment()
         comment.product = product
-        comment.name = request.POST['name']     # user.friendlyname
+        comment.name = request.POST['name']
         comment.description = request.POST['description']
         comment.save()
         messages.info(request, 'Your comment has been posted.')
@@ -80,7 +79,6 @@ def product_detail(request, product_id):
     else:
         product.views += 1
         product.save()
-
 
     if product:
         comments = Comment.objects.filter(product=product).order_by('created_date')
@@ -94,51 +92,3 @@ def product_detail(request, product_id):
     }
 
     return render(request, 'products/product_detail.html', context)
-
-
-
-
-
-
-
-# "urls.py" definieer je je waar de gebruiker heen kan
-# daarvoor moet in je "views.py" een functie bestaan
-# in je models.py definieer je je model welke je in de admin.py 'aanzet', zodat je deze kan bewerken
-
-
-
-
-# Object Orientated Programming
-# MVC - Model View Control
-
-
-
-# Model zijn je modellen (product, comment)
-# View is je views.py waarin je de betreffende data ophaalt
-# Control zijn je templates waarin je met je modellen kan interacteren (plaats nieuw comment)
-
-
-
-
-# def tel_1_erbij_op(getal):
-#     return getal + 1
-
-# nieuw_getal = tel_1_erbij_op(3)
-# >> 4
-
-
-# class Getal:
-#     int getal = X
-
-#     def plus1():
-#         return getal + 1
-    
-#     def min1():
-#         return getal -1
-
-
-# henk = Getal(3)
-# henk.plus1()
-# henk.plus1()
-# henk.plus1()
-# henk.min1()

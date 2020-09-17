@@ -2,11 +2,6 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
 {% endblock %}
 
 {% block content %}
@@ -25,9 +20,9 @@
                 "Just take a look at us!"
             </h1>
             <div class="mt-5">
-            <h5>
-                <a href="{% url 'products' %}" class="btn see-the-button rounded-pill px-1 py-1 mr-1">See My Collection!</a>
-            </h5>
+                <h5>
+                    <a href="{% url 'products' %}" class="btn see-the-button rounded-pill px-1 py-1 mr-1">See My Collection!</a>
+                </h5>
             </div>
         </div>
     </div>
@@ -36,8 +31,8 @@
     <img src="{{ MEDIA_URL }}barbieupsidedown.png" class="upside-down-barbie d-md-none" alt="Barbie">
     <div class="row h-100">
         <div class="col-10 offset-1 mt-2">
-           <h1 class="mt-0 mb-0 dollie-font big-logo text-center">Barbie Booth</h1>
-           <h3 class="display-4 small-header text-purple dollie-font text-center">
+            <h1 class="mt-0 mb-0 dollie-font big-logo text-center">Barbie Booth</h1>
+            <h3 class="display-4 small-header text-purple dollie-font text-center">
                 Time To Sell My Collection
             </h3>
             <p class="text-center p-text"><strong>Welcome to my Barbie Booth!</strong></p>
@@ -49,48 +44,45 @@
             </div>
         </div>
     </div>
-    
 </div>
-
-
 {% endblock %}
+
 {% block postloadjs %}
-    {{ block.super }}
-    <script type="text/javascript">
-        var barbiePicture = 1
-        console.log('One time setting of barbiepicture')
-        setInterval(function(){
-            $('.slide-out').hide("slide", { direction: "left" }, 500);
-            barbiePicture += 1
-            if (barbiePicture > 5) {
-                console.log('if barbie picture is 5')
-                barbiePicture = 1
-            }
-            setTimeout(
-                function() {
-                    if (barbiePicture == 1) {
-                        $("#barbiepicture").attr("src","{{ MEDIA_URL }}barbie1.png");
-                        $("#headertext").text('"Just take look at us!"')
-                    }
-                    else if (barbiePicture == 2) {
-                        $("#barbiepicture").attr("src","{{ MEDIA_URL }}barbie2.png");
-                        $("#headertext").text('"I\'d rather go to the moon than being sold"');
-                    }
-                    else if (barbiePicture == 3) {
-                        $("#barbiepicture").attr("src","{{ MEDIA_URL }}barbie3.png");
-                        $("#headertext").text('"I\'m very expensive you know.."');
-                    }
-                    else if (barbiePicture == 4) {
-                        $("#barbiepicture").attr("src","{{ MEDIA_URL }}barbie4.png");
-                        $("#headertext").text('"Please don\'t buy me!"');
-                    }
-                    else {
-                        $("#barbiepicture").attr("src","{{ MEDIA_URL }}barbie5.png");
-                        $("#headertext").text('"I\'m way too gorgeous to be sold!"');
-                    }
-                    $('.slide-out').ready().show("slide", { direction: "left" }, 500)
-                }, 1000);
-            ;
-        }, 10000 );
-    </script>
+{{ block.super }}
+<script type="text/javascript">
+    // Custom Javascript for sliding out and in new Barbies and change the header text
+    var barbiePicture = 1
+    setInterval(function(){
+        $('.slide-out').hide("slide", { direction: "left" }, 500);
+        barbiePicture += 1
+        if (barbiePicture > 5) {
+            barbiePicture = 1
+        }
+        setTimeout(
+            function() {
+                if (barbiePicture == 1) {
+                    $("#barbiepicture").attr("src","{{ MEDIA_URL }}barbie1.png");
+                    $("#headertext").text('"Just take look at us!"')
+                }
+                else if (barbiePicture == 2) {
+                    $("#barbiepicture").attr("src","{{ MEDIA_URL }}barbie2.png");
+                    $("#headertext").text('"I\'d rather go to the moon than being sold"');
+                }
+                else if (barbiePicture == 3) {
+                    $("#barbiepicture").attr("src","{{ MEDIA_URL }}barbie3.png");
+                    $("#headertext").text('"I\'m very expensive you know.."');
+                }
+                else if (barbiePicture == 4) {
+                    $("#barbiepicture").attr("src","{{ MEDIA_URL }}barbie4.png");
+                    $("#headertext").text('"Please don\'t buy me!"');
+                }
+                else {
+                    $("#barbiepicture").attr("src","{{ MEDIA_URL }}barbie5.png");
+                    $("#headertext").text('"I\'m way too gorgeous to be sold!"');
+                }
+                $('.slide-out').ready().show("slide", { direction: "left" }, 500)
+            }, 1000);
+        ;
+    }, 10000 );
+</script>
 {% endblock %}

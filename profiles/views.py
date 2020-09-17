@@ -15,7 +15,7 @@ def profile(request):
         form = UserProfileForm(request.POST, instance=profile)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Profile updated successfully')
+            messages.success(request, 'Cool, I updated your profile!')
         else:
             messages.error(request, 'Updating your profile failed. \
                            Check your form')
@@ -32,6 +32,7 @@ def profile(request):
     }
 
     return render(request, template, context)
+
 
 def order_history(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)

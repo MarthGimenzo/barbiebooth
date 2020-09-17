@@ -4,7 +4,6 @@
 <!doctype html>
 <html lang="en">
     <head>
-
         {% block meta %}
             <meta http-equiv="X-UA-Compatible" content="ie=edge">
             <meta charset="utf-8">
@@ -50,7 +49,6 @@
                 <div class="collapse navbar-collapse" id="navbarMenu">
                     <!-- LISTED MIDDLE -->
                     <ul class="navbar-nav ml-auto">
-                        
                         <!-- DOLLS -->
                         <li class="nav-item dropdown">
                             <a class="nav-link nav-hover text-purple pt-0 pb-0 mr-4" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -129,13 +127,9 @@
                                                 </span>
                                             </button>
                                         </div>
-                                        
                                     </div>
-                                    
                                 </form>
-                                
                             </div>
-                            
                         </li>
                         <!-- ABOUT -->
                         <li class="nav-item dropdown nav-hover">
@@ -164,11 +158,10 @@
                                 <div class="text-center d-none d-lg-block">
                                     <div><i class="fas fa-user fa-lg black-white-border"></i></div>
                                     {% if request.user.is_authenticated %}
-                                            <p class="my-0">{{user.username}}</p>
-                                            {% else %}
-                                            <p class="my-0">SIGN IN</p>
-                                            {% endif %}
-                                    
+                                    <p class="my-0">{{user.username}}</p>
+                                    {% else %}
+                                    <p class="my-0">SIGN IN</p>
+                                    {% endif %}
                                 </div>
                                  <div class="text-left d-lg-none mb-2">
                                  <hr>
@@ -193,7 +186,6 @@
                                     <a href="{% url 'account_login' %}" class="dropdown-item text-purple">Log In</a>
                                 {% endif %}
                             </div>
-                            
                         </li>
                         <!-- CART -->
                         <li class="nav-item">
@@ -227,7 +219,6 @@
                 </div>
             </nav>
         </header>
-
         {% if messages %}
             <div class="message-container ml-3">
                 {% for message in messages %}
@@ -255,10 +246,10 @@
         {% include 'includes/footer.html' %}
 
         {% block postloadjs %}
+        <!-- Show Toasts -->
             <script type="text/javascript">
                 $('.toast').toast('show');
             </script>
         {% endblock %}
-
     </body>
 </html>
