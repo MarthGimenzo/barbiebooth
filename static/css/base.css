@@ -268,6 +268,10 @@ body {
     max-width: 70%;
 }
 
+.sold-greyscale {
+    filter: grayscale(100%);
+}
+
 /* Paragraphs */
 
 .p-text {
