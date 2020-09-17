@@ -4,7 +4,6 @@
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}" type="text/css">
-<link rel="prefetch" href="RESOURCE_URL">
 {% endblock %}
 
 {% block page_header %}
@@ -144,15 +143,15 @@
     // Animated background for processing transaction (Loading Overlay)
     backgroundChanger();
     function backgroundChanger() {
-        var backgroundPicture = 1
+        var backgroundPicture = 1;
         $('#loading-overlay').css("background", "url({{ MEDIA_URL }}loader1.jpg)");  
         $('#loading-overlay').css("background", "url({{ MEDIA_URL }}loader2.jpg)");  
         $('#loading-overlay').css("background", "url({{ MEDIA_URL }}loader3.jpg)");  
         $('#loading-overlay').css("background", "url({{ MEDIA_URL }}loader4.jpg)");  
         setInterval(function(){
-            backgroundPicture += 1
+            backgroundPicture += 1;
             if (backgroundPicture > 4) {
-                backgroundPicture = 1
+                backgroundPicture = 1;
             }
             setTimeout(
                 function() {
@@ -169,7 +168,6 @@
                         $('#loading-overlay').css("background", "url({{ MEDIA_URL }}loader4.jpg)");
                     }
                 }, 0);
-            ;
         }, 200 );
     }
 </script>

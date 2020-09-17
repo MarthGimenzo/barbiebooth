@@ -51,18 +51,18 @@
 {{ block.super }}
 <script>
     // Custom Javascript for sliding out and in new Barbies and change the header text
-    var barbiePicture = 1
+    var barbiePicture = 1;
     setInterval(function(){
         $('.slide-out').hide("slide", { direction: "left" }, 500);
-        barbiePicture += 1
+        barbiePicture += 1;
         if (barbiePicture > 5) {
-            barbiePicture = 1
+            barbiePicture = 1;
         }
         setTimeout(
             function() {
                 if (barbiePicture == 1) {
                     $("#barbiepicture").attr("src","{{ MEDIA_URL }}barbie1.png");
-                    $("#headertext").text('"Just take look at us!"')
+                    $("#headertext").text('"Just take look at us!"');
                 }
                 else if (barbiePicture == 2) {
                     $("#barbiepicture").attr("src","{{ MEDIA_URL }}barbie2.png");
@@ -80,9 +80,8 @@
                     $("#barbiepicture").attr("src","{{ MEDIA_URL }}barbie5.png");
                     $("#headertext").text('"I\'m way too gorgeous to be sold!"');
                 }
-                $('.slide-out').ready().show("slide", { direction: "left" }, 500)
+                $('.slide-out').ready().show("slide", { direction: "left" }, 500);
             }, 1000);
-        ;
     }, 10000 );
 </script>
 {% endblock %}

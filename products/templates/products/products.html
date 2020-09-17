@@ -110,9 +110,9 @@
 {{ block.super }}
 <script>
     // Scroll to top of page when clicked on arrow at bottom of page
-    $('.btt-link').click(function(e) {
-        window.scrollTo(0,0)
-    })
+    $('.btt-link').click(function() {
+        window.scrollTo(0,0);
+    });
     
     // Refresh page and sort products when the selector is changed
     $('#sort-selector').change(function() {
@@ -134,19 +134,21 @@
     
             window.location.replace(currentUrl);
         }
-    })
+    });
     
     // Hide products that are not available anymore
+    var cb;
+    var product;
     $('#onlyAvailable').change(function() {
-        cb = document.getElementById('onlyAvailable')
-        console.log(cb.checked)
-        if (cb.checked == false) {
-            product = $(".product:contains('Sold!')")
+        cb = document.getElementById('onlyAvailable');
+        console.log(cb.checked);
+        if (cb.checked === false) {
+            product = $(".product:contains('Sold!')");
             product.show();
         } else {
-            product = $(".product:contains('Sold!')")
+            product = $(".product:contains('Sold!')");
             product.hide();
-        };
+        }
     });
 </script>
 {% endblock %}
