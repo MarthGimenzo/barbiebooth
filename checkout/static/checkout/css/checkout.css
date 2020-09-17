@@ -1,5 +1,7 @@
 /* Checkout Page */
 
+/* Stripe */
+
 .StripeElement,
 .stripe-style-input {
   box-sizing: border-box;
@@ -51,14 +53,13 @@ select option[value=""] {
     color: #aab7c4	
 }	
 
-
 #card-element {
     border: 5px solid #9a5366!important;
     border-radius: 35px!important;
     height:50px;
 }
 
-
+/* Loading Overlay */
 
 #loading-overlay {
     display: none;
@@ -75,8 +76,6 @@ select option[value=""] {
     border-top: 5px solid #9a5366;
     border-bottom: 5px solid #9a5366;
 }
-
-
 
 .loading-spinner {
     display: flex;

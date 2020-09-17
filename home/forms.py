@@ -19,7 +19,7 @@ class ContactForm(forms.ModelForm):
 
         for field in self.fields:
             self.fields[field].widget.attrs['class'] = 'contactform'
-            self.fields[field].widget.attrs['cols'] = 25
             if field == 'description':
                 self.fields[field].widget.attrs['class'] = 'messagefield'
+                self.fields[field].widget.attrs['cols'] = 25
             self.fields[field].label = False

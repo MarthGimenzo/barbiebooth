@@ -14,7 +14,7 @@
             <div class="text-center mb-2">
                 If you have any questions, feel free to ask me! I'll get in touch with you as soon as possible.
             </div>
-            <form action="" method="POST">
+            <form method="POST">
                 {% csrf_token %}
                 <div class="mb-2">
                     <strong>Name:</strong>
@@ -53,7 +53,7 @@
 {% block postloadjs %}
 <!-- Due to an issue that does not view the 'contact sent' message correctly,
 this javascript was added manually. Currentlty looking for another solution for this.-->
-<script type="text/javascript">
+<script>
     $('.toast').toast('show');
 </script>
 {% endblock %}

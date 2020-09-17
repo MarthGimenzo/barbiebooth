@@ -51,7 +51,7 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- DOLLS -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link nav-hover text-purple pt-0 pb-0 mr-4" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link nav-hover text-purple pt-0 pb-0 mr-4" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <div class="text-center d-none d-lg-block">
                                     <div><i class="fas fa-female fa-lg black-white-border"></i></div>
                                     <p class="my-0">DOLLS</p>
@@ -65,7 +65,7 @@
                                     </table>
                                 </div>
                             </a>
-                            <div class="dropdown-menu dropdown-menu-style bg-light-pink text-spacing mb-1 py-0" aria-labelledby="all-products-link">
+                            <div class="dropdown-menu dropdown-menu-style bg-light-pink text-spacing mb-1 py-0">
                                 <a href="{% url 'products' %}?category=barbie" class="dropdown-item text-purple">Barbie</a>
                                 <a href="{% url 'products' %}?category=francie" class="dropdown-item text-purple">Francie</a>
                                 <a href="{% url 'products' %}?category=skipper" class="dropdown-item text-purple">Skipper</a>
@@ -78,7 +78,7 @@
                         </li>
                         <!-- ACCESSORIES -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link nav-hover text-purple pt-0 pb-0 mr-4" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link nav-hover text-purple pt-0 pb-0 mr-4" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <div class="text-center d-none d-lg-block">
                                     <div><i class="fas fa-shopping-bag fa-lg black-white-border"></i></div>
                                     <p class="my-0">ACCESSORIES</p>
@@ -92,7 +92,7 @@
                                     </table>
                                 </div>
                             </a>
-                            <div class="dropdown-menu dropdown-menu-style bg-light-pink text-spacing mb-1 py-0" aria-labelledby="all-products-link">
+                            <div class="dropdown-menu dropdown-menu-style bg-light-pink text-spacing mb-1 py-0">
                                 <a href="{% url 'products' %}?category=clothing" class="dropdown-item text-purple">Clothing</a>
                                 <a href="{% url 'products' %}?category=shoes" class="dropdown-item text-purple">Shoes</a>
                                 <a href="{% url 'products' %}?category=bags" class="dropdown-item text-purple">Bags</a>
@@ -102,7 +102,7 @@
                         </li>
                         <!-- SEARCH -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link nav-hover text-purple pt-0 pb-0 mr-4" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link nav-hover text-purple pt-0 pb-0 mr-4" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <div class="text-center d-none d-lg-block">
                                     <div><i class="fas fa-search fa-lg black-white-border"></i></div>
                                         <p class="my-0">SEARCH</p>
@@ -116,7 +116,7 @@
                                     </table>
                                 </div>
                             </a>
-                            <div class="dropdown-menu bg-transparent border-0" aria-labelledby="all-products-link">
+                            <div class="dropdown-menu bg-transparent border-0">
                                 <form method="GET" action="{% url 'products' %}">
                                     <div class="input-group">
                                         <input class="form-control border border-purple rounded-pill search-form" type="text" name="q" placeholder="Search through my collection">
@@ -247,7 +247,7 @@
 
         {% block postloadjs %}
         <!-- Show Toasts -->
-            <script type="text/javascript">
+            <script>
                 $('.toast').toast('show');
             </script>
         {% endblock %}

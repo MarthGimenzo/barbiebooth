@@ -1,3 +1,19 @@
+/* Elements */
+
+html {
+    height: 100%;
+}
+
+body {
+    background: url('/media/homepage_background4.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-attachment: scroll;
+    height: calc(100vh - 50px);
+    color: #9a5366;
+    font-family: 'Ubuntu';
+    position: relative;
+}
+
 /* Custom fonts */
 
 @font-face {
@@ -20,28 +36,41 @@
     font-size: 10vh;
 }
 
-/* Elements */
+/* Text Colors and Styles*/
 
-html {
-    height: 100%;
-}
-
-body {
-    background: url('/media/homepage_background4.jpg') no-repeat center center fixed;
-    background-size: cover;
-    background-attachment: scroll;
-    height: calc(100vh - 50px);
-    color: #9a5366;
-    font-family: 'Ubuntu';
-    position: relative;
-}
-.semi-fill-page {
-    margin-bottom: 15vh;
+.text-darkmint {
+    color: #597a68 !important;
 }
 
-.fill-page {
-    margin-bottom: 50vh;
+.text-black {
+    color: #000 !important;
 }
+
+.text-white {
+    color: #FFFFFF !important;
+}
+
+.text-grey {
+    color: grey;
+}
+
+.text-purple {
+    color: #9a5366 !important;
+}
+
+.text-yellow {
+    color: #fff568 !important;
+}
+
+.text-light-mint {
+    color: #dbf1e5 !important;
+}
+
+.text-spacing {
+    letter-spacing: 1px;
+}
+
+/* Backgrounds */
 
 .bg-stripes {
     background: url('/media/homepage_background6.jpg') no-repeat center center fixed;
@@ -51,12 +80,104 @@ body {
     font-family: 'Ubuntu';
 }
 
+.bg-pink {
+    background: #f4b5c6;
+}
+
+.bg-light-pink {
+    background: #feeaf3;
+}
+
+.bg-light-yellow {
+    background: #fffea7;
+}
+
+.bg-light-mint {
+    background: #dbf1e5;
+}
+
+.bg-white {
+    background: white;
+}
+
+.bg-grey {
+    background: lightgrey;
+}
+
+.bg-transparent {
+    background: transparent;
+}
+
+/* Borders */
+
+.black-white-border {
+    color: white!important;
+    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+}
+
+.border-purple {
+    border: 5px solid #9a5366 !important;
+}
+
+.border-purple-top {
+    border-top: 5px solid #9a5366 !important;
+    border-left: 5px solid #9a5366 !important;
+    border-right: 5px solid #9a5366 !important;
+}
+
+.border-purple-x {
+    border-left: 5px solid #9a5366 !important;
+    border-right: 5px solid #9a5366 !important;
+}
+
+.border-purple-bottom {
+    border-left: 5px solid #9a5366 !important;
+    border-right: 5px solid #9a5366 !important;
+    border-bottom: 5px solid #9a5366 !important;
+}
+
+.bottom-border {
+    border-bottom: 2px solid #9a5366 !important;
+}
+
+/* Header Styles */
+
 .header-height {
     height: 75%;
 }
 
 .header-shadow {
     text-shadow: 2px 2px 5px #fffea7;
+}
+
+.small-header {
+    font-size: 25px;
+}
+
+.header-icons {
+    font-size: 30px;
+}
+
+/* Basic Page outlay and margins */
+
+.semi-fill-page {
+    margin-bottom: 15vh;
+}
+
+.fill-page {
+    margin-bottom: 50vh;
+}
+
+.push-top {
+    margin-top: 115px;
+}
+
+.half-push-top {
+    margin-top: 75px;
+}
+
+.super-push-top {
+    margin-top: 150px;
 }
 
 /* from Bulma */
@@ -69,6 +190,8 @@ body {
     width: 1.5rem;
 }
 
+/* Logos */
+
 .main-logo-link {
     width: fit-content;
 }
@@ -79,13 +202,10 @@ body {
     font-size: 50px;
 }
 
-.upside-down-barbie {
-    min-width: 300px;
-    max-width: 100%;
-    margin-left: 50%;
-    margin-right: -50%;
-    transform: translateX(-50%);    
-    
+@media (max-width: 991px) {
+    .logo-size {
+        font-size: 30px;
+    }
 }
 
 .big-logo {
@@ -103,9 +223,52 @@ body {
     }
 }
 
-.small-header {
-    font-size: 25px;
+/* Images */
+
+.upside-down-barbie {
+    min-width: 300px;
+    max-width: 100%;
+    margin-left: 50%;
+    margin-right: -50%;
+    transform: translateX(-50%);
 }
+
+.mypicture {
+    width: 50%;
+}
+
+.barbie-home-picture {
+    margin-top: 80px;
+    min-height: 30vh;
+    max-height: 50vh;
+    object-fit: contain;
+    z-index: 4;
+    position: relative;
+    -webkit-filter: drop-shadow(2px 2px 0 #feeaf3)
+                  drop-shadow(-2px -2px 0 #feeaf3);
+    filter: drop-shadow(2px 2px 0 #feeaf3) 
+            drop-shadow(-2px -2px 0 #feeaf3);
+}
+
+.standard {
+    margin-top: 80px;
+    min-height: 30vh;
+    max-height: 50vh;
+    object-fit: contain;
+    position: absolute;
+    z-index: 3;
+}
+
+.product_details_image {
+    height: 80%;
+    width: 80%;
+}
+
+.picture-width {
+    max-width: 70%;
+}
+
+/* Paragraphs */
 
 .p-text {
     font-size: 16px;
@@ -122,18 +285,17 @@ body {
     text-justify: inter-word;
 }
 
-.header-icons {
-    font-size: 30px;
-    
-}
-
-.mypicture {
-    width: 50%;
-}
+/* The Navbar */
 
 .navbar,
 .dropdown-menu-style {
     border: 5px solid #9a5366;
+}
+
+@media (max-width: 1199px) {
+    .navbar {
+        border-radius: 35px!important;
+    }
 }
 
 .dropdown-menu > form{
@@ -148,49 +310,18 @@ body {
     color: white !important;
 }
 
-/* Change the border radius of the navbar on screens smaller than xl */
-@media (max-width: 1199px) {
-    .navbar {
-        border-radius: 35px!important;
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
     }
 }
 
-.black-white-border {
-    color: white!important;
-    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
-}
-
-.barbie-home-picture {
-    margin-top: 80px;
-    min-height: 30vh;
-    max-height: 50vh;
-    object-fit: contain;
-    z-index: 4;
-    
-    position: relative;
-    /* Disabled for dropshadow load times....
-    -webkit-filter: drop-shadow(4px 4px 0 #9a5366)
-                  drop-shadow(-4px -4px 0 #9a5366);
-    filter: drop-shadow(4px 4px 0 #9a5366) 
-            drop-shadow(-4px -4px 0 #9a5366);
-    */
-}
-
-.standard {
-    margin-top: 80px;
-    min-height: 30vh;
-    max-height: 50vh;
-    object-fit: contain;
-    
-    position: absolute;
-    z-index: 3;
-    /* Disabled for dropshadow load times....
-    -webkit-filter: drop-shadow(4px 4px 0 #9a5366)
-                  drop-shadow(-4px -4px 0 #9a5366);
-    filter: drop-shadow(4px 4px 0 #9a5366) 
-            drop-shadow(-4px -4px 0 #9a5366);
-    */
-}
+/* Buttons */
 
 .btn-purple {
     background: #fff568!important;
@@ -243,13 +374,6 @@ body {
     }
 }
 
-@media (max-width: 991px) {
-    .logo-size {
-    
-    font-size: 30px;
-    }
-}
-
 .see-the-button:hover,
 .see-the-button:active,
 .see-the-button:focus,
@@ -278,90 +402,34 @@ body {
     color: #fff568;
 }
 
-.text-darkmint {
-    color: #597a68 !important;
+.btt-button {
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: #fff568;
 }
 
-.text-black {
-    color: #000 !important;
+.btt-link {
+    cursor: pointer;
 }
 
-.text-white {
-    color: #FFFFFF !important;
-}
-
-.text-grey {
-    color: grey;
-}
-
-.text-purple {
+.remove-item {
     color: #9a5366 !important;
+    cursor: pointer;
+    border: 5px solid #9a5366 !important;
+    border-radius: 50rem!important;
+    background: #fff568;
+    padding: 5px;
 }
 
-.text-yellow {
+.remove-item:hover {
+    background: #9a5366;
     color: #fff568 !important;
 }
 
-.text-light-mint {
-    color: #dbf1e5 !important;
-}
-
-.text-spacing {
-    letter-spacing: 1px;
-}
-
-.border-purple {
-    border: 5px solid #9a5366 !important;
-}
-
-.border-purple-top {
-    border-top: 5px solid #9a5366 !important;
-    border-left: 5px solid #9a5366 !important;
-    border-right: 5px solid #9a5366 !important;
-}
-
-.border-purple-x {
-    border-left: 5px solid #9a5366 !important;
-    border-right: 5px solid #9a5366 !important;
-}
-
-.border-purple-bottom {
-    border-left: 5px solid #9a5366 !important;
-    border-right: 5px solid #9a5366 !important;
-    border-bottom: 5px solid #9a5366 !important;
-}
-
-.bottom-border {
-    border-bottom: 2px solid #9a5366 !important;
-}
-
-.bg-pink {
-    background: #f4b5c6;
-}
-
-.bg-light-pink {
-    background: #feeaf3;
-}
-
-.bg-light-yellow {
-    background: #fffea7;
-}
-
-.bg-light-mint {
-    background: #dbf1e5;
-}
-
-.bg-white {
-    background: white;
-}
-
-.bg-grey {
-    background: lightgrey;
-}
-
-.bg-transparent {
-    background: transparent;
-}
+/* Forms */
 
 .commentform {
     border: 5px solid #9a5366 !important;
@@ -381,77 +449,6 @@ body {
     min-width: 100%;
     border-radius: 10px!important;
 }
-
-/* Slider from W3schools */
-
-/* The switch - the box around the slider */
-
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 70px;
-  height: 50px;
-  
-}
-
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-/* The slider */
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 7px;
-  background-color: #9a5366;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: #fff568;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #fff568;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-.slider.round {
-  border-radius: 34px;
-  border: 5px solid #9a5366 !important;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-  border: 5px solid #9a5366 !important;
-}
-
-/* Allauth form formatting */
 
 .allauth-form-inner-content p {
     margin-top: 1.5rem;
@@ -482,6 +479,69 @@ input:checked + .slider:before {
     margin: auto;
 }
 
+/* Slider (from W3schools) */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 70px;
+    height: 50px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 7px;
+    background-color: #9a5366;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #fff568;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #fff568;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+    border: 5px solid #9a5366 !important;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+    border: 5px solid #9a5366 !important;
+}
+
 /* Overlay style */
 
 .overlay {
@@ -495,57 +555,8 @@ input:checked + .slider:before {
     z-index: -3;
 }
 
-.push-top {
-    margin-top: 115px;
-}
-
-.half-push-top {
-    margin-top: 75px;
-}
-
-.super-push-top {
-    margin-top: 150px;
-}
-
-.product_details_image {
-    height: 80%;
-    width: 80%;
-}
-
 .sort-height {
     height: 50px;
-}
-
-.btt-button {
-    height: 50px;
-    width: 50px;
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    background: #fff568;
-}
-
-.btt-link {
-    cursor: pointer;
-}
-
-.remove-item {
-    color: #9a5366 !important;
-    cursor: pointer;
-    border: 5px solid #9a5366 !important;
-    border-radius: 50rem!important;
-    background: #fff568;
-    padding: 5px;
-}
-
-.remove-item:hover {
-    background: #9a5366;
-    color: #fff568 !important;
-}
-
-.picture-width {
-    max-width: 70%;
-    
 }
 
 /* Bootstrap Toasts */
@@ -557,15 +568,12 @@ input:checked + .slider:before {
     z-index: 99999999999;
 }
 
-
-
 .custom-toast {
     overflow: visible;
 }
 
 .toast-capper {
     height: 2px;
-
 }
 
 .bag-notification-wrapper {
@@ -574,10 +582,7 @@ input:checked + .slider:before {
     overflow-y: auto;
 }
 
-
-
-
-/* -------------------------------- Media Queries */
+/* --- Extra Media Queries --- */
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
@@ -585,24 +590,3 @@ input:checked + .slider:before {
     max-width: 80%;
   }
 }
-
-/* fixed top navbar only on medium and up */
-@media (min-width: 992px) {
-    .fixed-top-desktop-only {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 1030;
-    }
-}
-
-/* Fixed logo in navbar on small devices */
-
-@media (max-width: 991px) {
-    .logo-size {
-    
-    font-size: 30px;
-    }
-}
-
