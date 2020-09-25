@@ -34,6 +34,11 @@ ALLOWED_HOSTS = ['barbiebooth.herokuapp.com', 'localhost']
 # Application definition
 
 INSTALLED_APPS = [
+    'home',
+    'products',
+    'cart',
+    'checkout',
+    'profiles',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -44,14 +49,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    'home',
-    'products',
-    'cart',
-    'checkout',
-    'profiles',
-
     # Other apps
-
     'crispy_forms',
     'storages',
 ]
