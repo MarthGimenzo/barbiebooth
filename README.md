@@ -393,10 +393,70 @@ Some errors occured when using Flake8, but these were acceptable errors that mai
 
 ## Deployment
 
+### Heroku Deployment
 
+Deployment of Barbie Booth to Heroku has been done by the following steps:
 
+1.	A new app was created on the Heroku Dashboard.
+2.	Added Heroku Postgress as addon in the Heroku Dashboard.
+3.	Installed dj_database_url in GitPod.
+4.	Installed psycopg2-binary in GitPod.
+5.	Added the Postgress DATABASE_URL to settings.py.
+6.	Made migrations.
+7.	Installed gunicorn in GitPod.
+8.	Created a Procfile.
+9.	Added ‘barbiebooth.herokuapp.com’ to ALLOWED_HOSTS in settings.py
+10.	Initialized Heroku Git remote using the command: Heroku git:remote -a barbiebooth.
+11.	Pushed to Heroku.
+12.	Added a bucket on AWS S3 for Barbie Booth.
+13.	Setup AIM on AWS, setup policies, user group, users and acces keys.
+14.	Installed boto3 in GitPod.
+15.	Installed django_storages in GitPod.
+16.	Added the AWS access keys to settings.py and added them to the config vars in Heroku.
 
+### Run Project Locally
 
+You can run the project locally in your IDE by following these instructions: PIP, Python3 and Git need to be installed on your computer.
+
+1.	On the GitHub repository of Barbie Booth, click clone or download;
+2.	Click ‘Download ZIP;
+3.	Unpack the downloaded ZIP file;
+4.	Open the index.html file with your preferred IDE;
+5.	Keep in mind that the following following packages need to be installed (from the requirements.txt):
+    1. asgiref==3.2.10
+    2. boto3==1.14.51
+    3. botocore==1.17.51
+    4. dj-database-url==0.5.0
+    5. Django==3.1
+    6. django-allauth==0.42.0
+    7. django-countries==6.1.3
+    8. django-crispy-forms==1.9.2
+    9. django-forms-bootstrap==3.1.0
+    10. django-storages==1.9.1
+    11. docutils==0.15.2
+    12. gunicorn==20.0.4
+    13. jmespath==0.10.0
+    14. oauthlib==3.1.0
+    15. Pillow==7.2.0
+    16. psycopg2-binary==2.8.5
+    17. python3-openid==3.2.0
+    18. pytz==2020.1
+    19. requests-oauthlib==1.3.0
+    20. s3transfer==0.3.3
+    21. sqlparse==0.3.1
+    22. stripe==2.50.0
+
+## Credits
+
+### Code
+
+Developing this website was based on lessons from Code Institute. The lessons were mainly used to setup the structure of the html and to create models and views. There is some JavaScript that was directly taken from these lessons. In particular:
+-	The remove item and reload cart JavaScript on the ‘What You Picked’ page.
+-	The scroll to top of page JavaScript on the ‘Products’ page.
+-	The refresh page and sort products when the selector is changed JavaScript on the ‘Products’ page.
+
+Also, code from Bootstrap 4 was used:
+- Bootstrap4: Bootstrap Library used throughout the project mainly to make site responsive using the Bootstrap Grid System.
 
 
 
