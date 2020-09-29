@@ -466,6 +466,7 @@ All content was written by myself, except for the following content:
     - The Privacy Policy content was created using a generator from webwinkelkeur.nl
 -   [Shopify.com](https://www.shopify.com/)
     - The Terms & Conditions content was created using a generator from shopify.com.	
+
 Please note that this content is not definite yet. It was used as an impression of how it should look, but as of yet, the website is not fully active yet. It’s still in a development version. Should the website be fully deployed and launched, this content is sure to change.
 
 ### Media
