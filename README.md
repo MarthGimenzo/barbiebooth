@@ -489,7 +489,7 @@ What I would also like to say is that, since this is my last project under Code 
 
 ### Special Thanks
 
-- Code Instute
+- Code Institute
 - All the tutors at the tutor support at Code Institute.
 - My mentor, Antonio Rodriguez;
 - Other students from Code Institute;
