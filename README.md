@@ -55,15 +55,15 @@ Barbie Booth utilises a colour scheme of 8 different colours. Pink and yellow co
 In this pdf file you can find the mockups that were created for Barbie Booth using Balsamiq.</br>
 It contains mockups for the following pages:
 
-- Home;
-- About;
-- Contact;
-- FAQS;
-- Products;
-- Product Details;
-- My Profile;
-- Cart;
-- Checkout.
+- Home
+- About
+- Contact
+- FAQS
+- Products
+- Product Details
+- My Profile
+- Cart
+- Checkout
 
 [PDF of Mockups of Barbie Booth](https://github.com/MarthGimenzo/barbiebooth/blob/master/static/pdf/barbiebooth_mockups.pdf)
 
@@ -85,3 +85,106 @@ It contains mockups for the following pages:
 
 #### Authorization
 
+- The user is able to register to the website on a separate page. A confirmation email is sent to the user.
+- The user is able to retrieve his password when forgotten.
+- The user is able to log in and out.
+- The user is able to set up a personal profile that is connected to their account to make the checking out process easy.
+
+#### Messages (Toasts)
+
+- When the user performs certain actions, a message will display on the top right of the page that gives the user information about their action. When the user adds a product to their cart, it also shows a small overview of what the user currently has in their cart.
+
+#### Footer
+
+- The most noteworthy feature of the footer is the ‘Popular Links’ section which gives the user convenient shortcuts to different parts of the website, such as Home, About, Contact, FAQS, Privacy Policy, Terms & Conditions.
+
+### Features for visitors
+
+#### Homepage
+
+- A quirky seventies style ‘showcase’ of the products on the website, with a button that leads to the products page when clicked.
+- A quick introduction to the website and a link to the ‘About’ page.
+
+#### About Page
+
+- An introduction about my mother (the admin) and the purpose, and the ‘why’ of this project.
+- Some convenient links to other parts of the website, such as Home, About, Contact, FAQS, Privacy Policy, Terms & Conditions.
+
+#### Contact Page
+
+- The feature to send a form with the user’s details and question or feedback. The form is sent with the submit button. The user’s feedback can be seen by the admin at the back-office of Django.
+- A convenient link to go back to the homepage.
+
+#### FAQS
+
+- The page contains some frequently asked questions and answers.
+- Convenient links to go back to the homepage or contact page.
+
+#### Privacy Policy
+
+- An extensive privacy policy. Though at the moment still a concept version as the website is not officially launched yet.
+- Convenient links to go back to the homepage or contact page.
+
+#### Terms & Conditions
+
+- An extensive terms & conditions page. Though at the moment still a concept version as the website is not officially launched yet.
+- Convenient links to go back to the homepage or contact page.
+
+#### Products Page
+
+- A list of the current products.
+- Convenient category buttons at the top of the page view only products in a certain category.
+- A selector to sort all products by name, price, condition, year or category, alle ascending or descending.
+- A button to filter out sold products, so only available products will be viewed.
+- For every product, details are shown regarding its name, year, category, condition and price.
+- When a product is sold, its picture appears in grayscale with green letters: ‘Sold!’
+- A small button with an arrow on the right bottom of page. When clicked the page navigates to the top.
+- When ‘I need this’ is clicked the product is added to the cart and the cart contents are shown in the top right corner of the page using messages (toast).
+- When clicked on the picture of a product the user is redirected to the product’s details page.
+
+#### Product Details Page
+
+- Full details of the product regarding the name, category condition, times viewed, the price and the description.
+- A large picture of the product. It can be viewed in full detail when clicked.
+- When ‘Put it in my cart!' is clicked the product is added to the cart and the cart contents are shown in the top right corner of the page using messages (toast).
+- A comment section where users can place comments underneath a product and ask questions. Comments can only be placed when the user is logged in. Comments of the superuser (GeiskeZijlstra) are viewed in pink on the left side. Comments of other users are viewed on the right side in yellow.
+
+#### Cart Page
+
+- Full details of the product regarding the name, SKU, year, category, condition, price.
+- A button with every product that removes the product from the cart when clicked.
+- An overview of the total costs of the products, the delivery costs and the grand total.
+- A button that leads to the checkout page when clicked.
+
+#### Checkout Page
+
+- An overview of the order the user is about to checkout.
+- Forms where the user can enter his or her personal information and delivery information.
+- A checkbox to ensure the user’s information is saved to the user’s profile.
+- A stripe payment card input form.
+- A button that leads the user back to the cart page so the user can adjust his or her cart.
+- A button that initiates the checkout background process and leads the user to the checkout success page when the transaction succeeded.
+- A loading overlay with a spinning spiral to indicate that the transaction is processing.
+
+#### Other Features
+
+- The website is completely responsive.
+- The website contains interactive elements such as animation when hovering over the navbar buttons and other buttons throughout the site. 
+- The website uses icons that were retrieved from font awesome.
+
+### Features for the admin
+
+- The admin or superuser can log into to the Django back-office of the website.
+- The admin has the ability to view and edit the list of users and their emails and status.
+- The admin has the ability to view all placed orders so they can be sent to their address.
+- The admin has the ability to view the forms that were submitted by users through the contact page.
+- The admin has the ability to add, delete or edit categories of products
+- The admin has the ability to view, edit and delete the comments of users that were left on the product details page.
+- The admin has the ability to add, delete and edit products and change their status. 
+
+## Features for future releases
+
+- The ability to log in to the site using social accounts.
+- The ability to add more options to pay with stripe, including iDeal.
+- The ability for users to add favourites to their account.
+- The ability for users to sign in for a mailing list and get updates about new products that are added to the site.
