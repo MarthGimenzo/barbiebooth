@@ -470,9 +470,30 @@ Please note that this content is not definite yet. It was used as an impression 
 
 ### Media
 
+All pictures of the products were taken by myself and are original. The following media on the website is retrieved elsewhere and deserves some credits:
 
+- The first picture in the slideshow on the homepage (First Barbie) was retrieved from: [Walmart.com](https://www.walmart.com/ip/Barbie-Signature-Mattel-75Th-Anniversary-Original-1959-Barbie-Doll-Reproduction/873608120)
+- The second picture in the slideshow on the homepage (Astronaut Barbie) was retrieved from: [Collectspace.com](http://www.collectspace.com/news/news-080513b.html)
+- The third picture in the slideshow on the homepage (Chique Barbie) was retrieved from: [Internet-toys.com](https://www.internet-toys.com/372904-mattel-barbie-pop-jubileum-barbie-fashion-model-zwart/?gclid=Cj0KCQjwtsv7BRCmARIsANu-CQdVvTwlb_uom4CgB8OCi0bnzEvewEOae85rc45iO_TSIAj6_yDeSRMaAhRrEALw_wcB)
+- The fourth picture in the slideshow on the homepage (Skipper) was retrieved from: [Mattel.com](https://barbie.mattel.com/shop/en-us/ba/vintage-skipper-dolls/skipper-doll-original-outfit-950-1964)
+- The fifth picture in the slideshow on the homepage (Ken) was retrieved from: [Aliexpress.com](https://www.aliexpress.com/i/32991437444.html)
+- The Barbie feet that were used as a background in the second section of the homepage were retrieved from [Womenshealthmag.com](https://www.womenshealthmag.com/life/a22102328/barbie-feet-instagram-trend)
+- The spiral image on the homepage was edited by myself and is used on several page but orginally comes from [Vectorstock.com](https://www.vectorstock.com/royalty-free-vector/abstract-swirl-background-from-spiral-ray-stripes-vector-16317114)
+- The font called 'DollieScript' is a font that need to be payed for if used on a launched website. It was retrieved from [Dafont.com](https://www.dafont.com/dollie-script.font?text=Barbie&psize=l)
 
+### Acknowledgements
 
+The idea of this website is of me and my mother, and I'm happy she likes the result!</br>
+What I would also like to say is that, since this is my last project under Code Institute: I enjoyed everything. Especially the support from Code Institute itself. Confidence, persistence and trusting yourself is key, because coding can be confusing and hard sometimes. Keeping a positive and steady mind is what I was taught, and I will stay with that.
 
+### Special Thanks
 
+- Code Instute
+- All the tutors at the tutor support at Code Institute.
+- My mentor, Antonio Rodriguez;
+- Other students from Code Institute;
+- Diederik de Bruin;
+- Berber Visser;
+- Well.. my mother of course.
 
+Thank you all!
