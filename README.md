@@ -247,7 +247,15 @@ It contains mockups for the following pages:
 
 ## Testing
 
-The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
+The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.</br></br>
+Some errors occured when using Flake8, but these were acceptable errors that mainly occurred in the root Django code.</br></br>
 
+- [W3C Markup Validator](https://validator.w3.org/)
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+- [JJavascript Validator](http://beautifytools.com/javascript-validator.php)
+- [Flake8](https://flake8.pycqa.org/en/latest/)
 
+### Testing User Stories from User Experience (UX) Section
 
+#### 1. As a Barbie Collector I want to be able to view a list of all available products so that I can select products from the collection to purchase.
+    1. When clicked on ‘DOLLS’ or ‘ACCESSORIES’ a dropdown menu appears which provides all categories and ‘ALL DOLLS’ and ‘ALL ACCESSORIES’.
