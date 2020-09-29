@@ -78,7 +78,7 @@
 {% block postloadjs %}
 {{ block.super }}
 <script>
-    //Remove item and reload bag
+    //Remove item and reload cart
     $(".remove-item").click(function (e) {
         var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr("id").split("remove_")[1];
