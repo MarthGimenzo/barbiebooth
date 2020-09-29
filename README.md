@@ -423,28 +423,28 @@ You can run the project locally in your IDE by following these instructions: PIP
 3.	Unpack the downloaded ZIP file;
 4.	Open the index.html file with your preferred IDE;
 5.	Keep in mind that the following following packages need to be installed (from the requirements.txt):
-    1. asgiref==3.2.10
-    2. boto3==1.14.51
-    3. botocore==1.17.51
-    4. dj-database-url==0.5.0
-    5. Django==3.1
-    6. django-allauth==0.42.0
-    7. django-countries==6.1.3
-    8. django-crispy-forms==1.9.2
-    9. django-forms-bootstrap==3.1.0
-    10. django-storages==1.9.1
-    11. docutils==0.15.2
-    12. gunicorn==20.0.4
-    13. jmespath==0.10.0
-    14. oauthlib==3.1.0
-    15. Pillow==7.2.0
-    16. psycopg2-binary==2.8.5
-    17. python3-openid==3.2.0
-    18. pytz==2020.1
-    19. requests-oauthlib==1.3.0
-    20. s3transfer==0.3.3
-    21. sqlparse==0.3.1
-    22. stripe==2.50.0
+    - asgiref==3.2.10
+    - boto3==1.14.51
+    - botocore==1.17.51
+    - dj-database-url==0.5.0
+    - Django==3.1
+    - django-allauth==0.42.0
+    - django-countries==6.1.3
+    - django-crispy-forms==1.9.2
+    - django-forms-bootstrap==3.1.0
+    - django-storages==1.9.1
+    - docutils==0.15.2
+    - gunicorn==20.0.4
+    - jmespath==0.10.0
+    - oauthlib==3.1.0
+    - Pillow==7.2.0
+    - psycopg2-binary==2.8.5
+    - python3-openid==3.2.0
+    - pytz==2020.1
+    - requests-oauthlib==1.3.0
+    - s3transfer==0.3.3
+    - sqlparse==0.3.1
+    - stripe==2.50.0
 
 ## Credits
 
@@ -455,12 +455,18 @@ Developing this website was based on lessons from Code Institute. The lessons we
 -	The scroll to top of page JavaScript on the ‘Products’ page.
 -	The refresh page and sort products when the selector is changed JavaScript on the ‘Products’ page.
 
-Also, code from Bootstrap 4 was used:
-- Bootstrap4: Bootstrap Library used throughout the project mainly to make site responsive using the Bootstrap Grid System.
+Also, code (mainly classes) from Bootstrap 4 was used:
+-   [Bootstrap 4.4.1](https://getbootstrap.com/)
+    - Bootstrap 4.4.1 was used to aid with the responsiveness of the website and to utilize pre-built classes to style the website.
 
+### Content
 
+All content was written by myself, except for the following content:
+-	The Privacy Policy content was created using a generator from webwinkelkeur.nl
+-	The Terms & Conditions content was created using a generator from shopify.com.
+Please note that this content is not definite yet. It was used as an impression of how it should look, but as of yet, the website is not fully active yet. It’s still in a development version. Should the website be fully deployed and launched, this content is sure to change.
 
-
+### Media
 
 
 
