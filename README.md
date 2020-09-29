@@ -204,3 +204,50 @@ It contains mockups for the following pages:
     - Gitpod was used as the IDE to develop the website in.
 1.  [Google Chrome Developer Tools](https://www.google.com/intl/nl_nl/chrome/)
     - Google Developer Tools were used for checking the console and tracing issues on the website.
+1.  [Django](https://www.djangoproject.com/)
+    - Django was used as the python framework used to efficiently create the website.
+1.  [Stripe](https://stripe.com/)
+    - Stripe was used as the payment system to validate and accept the payments of the user when checking out.
+1.  [AWS S3 Bucket](https://aws.amazon.com/s3/)
+    - AWS S3 Bucket was used to store the images of the website.
+1.  [Bootstrap 4.4.1](https://getbootstrap.com/)
+    - Bootstrap 4.4.1 was used to aid with the responsiveness of the website and to utilize pre-built classes to style the website.
+1.  [PIP](https://pypi.org/project/pip/)
+    - PIP was used for installation of the tools that were needed for developing the website.
+1.  [Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html)
+    - Boto3 was used for configuration and management of AWS S3.
+1.  [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/)
+    - Django Crispy Forms was used to easily create forms using the Bootstrap4 styles.
+1.  [Django Allauth](https://django-allauth.readthedocs.io/en/latest/installation.html)
+    - Django Allauth was used to enable user login, registering and password retrieval.
+1.  [Django-Countries](https://pypi.org/project/django-countries/)
+    - Django Countries was used to easily create a select list for selecting countries in forms.
+1.  [Psycopg2-binary](https://pypi.org/project/psycopg2-binary/)
+    - Psycopg2-binary was used as a database adaptor for Python.
+1.  [Gunicorn](https://gunicorn.org/)
+    - Gunicorn was used to aid in deployment of the project to Heroku.
+1.  [Pillow](https://pillow.readthedocs.io/en/stable/)
+    - Pillow was used as a Python imaging library to process storing images into the database.
+1.  [PopperJS](https://popper.js.org/)
+    - PopperJS was used to aid with sliding in and out the Barbies on the homepage.
+1.  [Font Awesome](https://fontawesome.com/)
+    - Font Awesome was used to add icons for aesthetic and UX purposes.
+1.  [jQuery](https://jquery.com/)
+    - jQuery came with Bootstrap to make the navbar responsive and to add effects by manipulating the DOM.
+1.  [Git](https://git-scm.com/)
+    - Git was used for version control by utilizing the Gitpod terminal.
+1.  [GitHub](https://github.com/)
+    - GitHub was used to store the projects code after being pushed from Git.
+1.  [Photoshop](https://www.adobe.com/nl/products/photoshop.html)
+    - Photoshop was used to create backgrounds, resizing images and editing photos for the website.
+1.  [Illustrator](https://www.adobe.com/nl/products/illustrator.html)
+    - Illustrator was used to create backgrounds and edit pictures.
+1.  [Balsamiq](https://balsamiq.com/)
+    - Balsamiq was used to create the [mockups](https://github.com/MarthGimenzo/barbiebooth/blob/master/static/pdf/barbiebooth_mockups.pdf) during the design process.
+
+## Testing
+
+The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
+
+
+
