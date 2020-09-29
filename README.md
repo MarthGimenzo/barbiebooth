@@ -185,6 +185,22 @@ It contains mockups for the following pages:
 ## Features for future releases
 
 - The ability to log in to the site using social accounts.
-- The ability to add more options to pay with stripe, including iDeal.
+- The ability to add more options to pay with Stripe, including iDeal.
 - The ability for users to add favourites to their account.
 - The ability for users to sign in for a mailing list and get updates about new products that are added to the site.
+
+## Technologies Used
+
+### Languages Used
+
+-   [HTML5](https://en.wikipedia.org/wiki/HTML5)
+-   [CSS3](https://en.wikipedia.org/wiki/CSS)
+-   [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+-   [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+
+### Frameworks, Libraries & Programs Used
+
+1.  [GitPod](https://gitpod.io/workspaces/)
+    - Gitpod was used as the IDE to develop the website in.
+1.  [Google Chrome Developer Tools](https://www.google.com/intl/nl_nl/chrome/)
+    - Google Developer Tools were used for checking the console and tracing issues on the website.
