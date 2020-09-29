@@ -52,3 +52,6 @@ Barbie Booth utilises a colour scheme of 8 different colours. Pink and yellow co
 
 ### Mockups
 
+In this pdf file you can find the mockups that were created for Barbie Booth using Balsamiq:
+
+[PDF of Mockups of Barbie Booth]()
