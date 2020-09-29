@@ -19,3 +19,14 @@ Some dolls are extremely rare and expensive. Finding an exact copy of it will be
 #### Colour Scheme
 
 Barbie Booth utilises a colour scheme of 8 different colours. Pink and yellow colours are the mainly used colours. The pink colours are used because, of course, these are the colours of the Barbie brand. To complement this colour, mint and yellow are used. This gives the website a playful, seventies style feeling.
+
+<h2 align="center"><img src="https://github.com/MarthGimenzo/barbiebooth/blob/master/static/images/readme/colourscheme.jpg?raw=true"></h2>
+
+- Purple: #9a5266
+- Pink: #f4b5c6
+- Light Pink: #feeaf3
+- White: #ffffff
+- Mint: #dbe7e7
+- Light Yellow: #fffda6
+- Yellow: #fef568
+- Dark Mint: #597a69
