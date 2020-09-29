@@ -257,5 +257,11 @@ Some errors occured when using Flake8, but these were acceptable errors that mai
 
 ### Testing User Stories from User Experience (UX) Section
 
-#### 1. As a Barbie Collector I want to be able to view a list of all available products so that I can select products from the collection to purchase.
+#### 1.     As a Barbie Collector I want to be able to view a list of all available products so that I can select products from the collection to purchase.
 1. When clicked on ‘DOLLS’ or ‘ACCESSORIES’ a dropdown menu appears which provides all categories and ‘ALL DOLLS’ and ‘ALL ACCESSORIES’.
+
+#### 2.     As a Barbie Collector I want to be able to view individual details of a product so that I can see the price, description, year, image and condition of the product.
+1.	When clicked on a picture of a product on the product page the user is directed to the product details page of that specific product successfully. 
+2.	A large image of the product is viewed along with its price, description, year and condition.
+3.	When the image is clicked, a new tab is launched within the browser that views the image in full size.
+
