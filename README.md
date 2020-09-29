@@ -258,4 +258,4 @@ Some errors occured when using Flake8, but these were acceptable errors that mai
 ### Testing User Stories from User Experience (UX) Section
 
 #### 1. As a Barbie Collector I want to be able to view a list of all available products so that I can select products from the collection to purchase.
-    1. When clicked on ‘DOLLS’ or ‘ACCESSORIES’ a dropdown menu appears which provides all categories and ‘ALL DOLLS’ and ‘ALL ACCESSORIES’.
+1. When clicked on ‘DOLLS’ or ‘ACCESSORIES’ a dropdown menu appears which provides all categories and ‘ALL DOLLS’ and ‘ALL ACCESSORIES’.
