@@ -257,11 +257,154 @@ Some errors occured when using Flake8, but these were acceptable errors that mai
 
 ### Testing User Stories from User Experience (UX) Section
 
-#### 1.     As a Barbie Collector I want to be able to view a list of all available products so that I can select products from the collection to purchase.
+#### 1. As a Barbie Collector I want to be able to view a list of all available products so that I can select products from the collection to purchase.
 1. When clicked on ‘DOLLS’ or ‘ACCESSORIES’ a dropdown menu appears which provides all categories and ‘ALL DOLLS’ and ‘ALL ACCESSORIES’.
 
-#### 2.     As a Barbie Collector I want to be able to view individual details of a product so that I can see the price, description, year, image and condition of the product.
+#### 2. As a Barbie Collector I want to be able to view individual details of a product so that I can see the price, description, year, image and condition of the product.
 1.	When clicked on a picture of a product on the product page the user is directed to the product details page of that specific product successfully. 
 2.	A large image of the product is viewed along with its price, description, year and condition.
 3.	When the image is clicked, a new tab is launched within the browser that views the image in full size.
+
+#### 3. As a Barbie Collector I want to be able to view the total of my purchases so that I can see how much I will spend.
+1.	The grand total of all products in the cart are displayed correctly on the right side of the navbar.
+2.	When the user is on the products page, and clicks on the ‘I need this’ button, the product is added to the cart and a message (toast) appears at the top right corner of the website that displays an overview of all added products and its grand total.
+3.	When the user is on the product details page, and clicks on the ‘Put it in my cart!’ button, the product is added to the cart and a message (toast) appears at the top right corner of the website that displays an overview of all added products and its grand total.
+4.	When clicked on the ‘Buy this!’ button in the message (toast) that appears when a product is added, the user is directed to the Cart page.
+5.	On the Cart page, the total of all products is defined, along with the delivery costs, resulting in a Grand Total, which are all correctly displayed.
+
+#### 4. As a Barbie Collector I want to be able to ask specific questions about a product so that I can decide whether I like this product.
+1.	On the product details page, a user is able to submit a comment about the specific product.
+2.	The user is only able to place a comment if he is logged in. If not, the comment form is replaced with a message that tells the user to login in order to submit comments. A button is provided that gives a convenient link to the login page.
+3.	If no comments have been submitted for a certain product, a message will tell that no comments have been submitted yet.
+4.	All comments made by the admin/superuser are displayed in pink on the left side.
+5.	All comments made by other users are displayed in yellow on the right side.
+
+#### 5. As a Site User I want to be able to contact the store owner of the website so that I can ask about various issues that I need information about.
+1.	On the contact page, a user is able to fill in a feedback form.
+2.	All form fields are successfully validated and submitted when clicked on the ‘Submit!’ button.
+3.	Company details are also provided so the visitor can call the store owner.
+
+#### 6. As a Site User I want to be able to register for an account so that I can have a personal account and view my profile.
+1.	When the user is not logged in, a ‘SIGN IN’ option is displayed in the navbar.
+2.	When clicked on the ‘SIGN IN’ item, a dropdown menu appears that gives the user the ability to either sign up, or sign in.
+3.	When clicked on the ‘Sign Up’ item, the user is redirected to the Sign Up page.
+4.	The user is able to fill in a form asking twice for an e-mail, a username, and twice for a password.
+5.	When clicked on the ‘Sign Up’ button, the user is automatically signed in and a confirmation e-mail is sent to the user. Messages (toasts) display on the top right corner of the page to inform the user about this.
+6.	When the user is logged in, the username is displayed on the right side of the navbar.
+7.	When clicked on the username, a dropdown menu appears that gives the user the option to view his or her profile, or sign out.
+8.	When clicked on ‘My Profile’, the user is directed to the ‘My Profile’ page, where delivery information can be entered and stored, and the order history can be viewed.
+
+#### 7. As a Site User I want to be able to login and logout so that I can access personal account information.
+1.	When the user is logged in, the username is displayed on the right side of the navbar.
+2.	When clicked on the username, a dropdown menu appears that gives the user the option to view his or her profile, or sign out.
+3.	When clicked on ‘My Profile’, the user is directed to the ‘My Profile’ page, where delivery information can be entered and stored, and the order history can be viewed.
+
+#### 8. As a Site User I want to be able to have a personalized user profile so that I can view order history and save payment information.
+1.	When the user is logged in, the username is displayed on the right side of the navbar.
+2.	When clicked on the username, a dropdown menu appears that gives the user the option to view his or her profile, or sign out.
+3.	When clicked on ‘My Profile’, the user is directed to the ‘My Profile’ page, where delivery information can be entered and stored, and the order history can be viewed.
+
+#### 9. As a Site User I want to be able to recover my password in case I forgot it so that I can re-gain access to my account.
+1.	When the user is not logged in, a ‘SIGN IN’ option is displayed in the navbar.
+2.	When clicked on the ‘SIGN IN’ item, a dropdown menu appears that gives the user the ability to either sign up, or sign in.
+3.	When clicked on ‘Sign In’, the user is directed to the ‘Sign In’ page.
+4.	When clicked on ‘Forgot Password?’, the user is directed to the ‘Password Reset’ page.
+5.	When the user enters his or her e-mail in the form and clicks the ‘Reset My Password’ button, an e-mail is sent to the user.
+6.	When clicked on the link in the e-mail, the user is redirected to the ‘Change Password’ page.
+7.	The user is provided with two form fields to enter a new password. When clicked on ‘Change My Password’, the password is successfully changed.
+
+#### 10. As a Barbie Collector want to be able to sort the list of available dolls and accessories so that I can identify best condition, best priced and categorically sorted products.
+1.	When clicked on ‘DOLLS’ or ‘ACCESSORIES’ a dropdown menu appears which provides all categories and ‘ALL DOLLS’ and ‘ALL ACCESSORIES’.
+2.	When clicked on a certain category the user is directed to the products page on which the products of a selected category (or all products) are successfully displayed.
+3.	When clicked on the ‘SORT BY’ selector, users are able to sort products by price, condition, year, name and category, all ascending or descending. This sorting selector works correctly and works immediately.
+
+#### 11. As a Barbie Collector want to be able to sort on specific categories of dolls/accessories so that I can see what dolls and accessories are available in certain categories.
+1.	When clicked on ‘DOLLS’ or ‘ACCESSORIES’ a dropdown menu appears which provides all categories and ‘ALL DOLLS’ and ‘ALL ACCESSORIES’.
+2.	When clicked on a certain category the user is directed to the products page on which the products of a selected category (or all products) are successfully displayed.
+3.	When clicked on a certain category at the top of the products page, the user is redirected to the same page, but only with products in that specific category.
+
+#### 12. As a Barbie Collector want to be able to search for a doll/accessory by name, description or year so that I can look for a specific type of doll or accessory.
+1.	When clicked on the ‘SEARCH’ item in the navbar, a dropdown search bar appears.
+2.	The user is able to enter a specific term and click on the magnifying glass to submit the search query.
+
+#### 13. As a Barbie Collector want to be able to see what I’ve searched so that I can decide whether the product I want is in the collection.
+1.	When the user enters a term in the search form and clicks on the magnifying glass icon, the user is directed to the products page.
+2.	Only products are viewed within the search terms based on name, description and year successfully.
+
+#### 14. As a Barbie Collector want to be able to filter products that are available so that I can view only products that are available to buy.
+1.	On the products page, when a user toggles the ‘Only Available’ checkbox, products that are not available (sold) are immediately filtered out and not displayed within the product list.
+
+#### 15. As a Barbie Collector want to be able to view the items in my cart to be purchased so that I can see the total cost of my purchase and the items I will buy.
+1.	On the ‘Checking Out’ page, an overview of the products in the cart is displayed, along with the order total, delivery costs and the grand total.
+
+#### 16. As a Barbie Collector want to be able to enter my payment information so that I can check out.
+1.	On the ‘Checking Out’ page, the user is able to enter his or her information details and delivery information in a form. The user is also able to enter credit card credentials.
+2.	When the user is logged in, a checkbox is displayed that saves the user’s information to his or her account when the user checks out.
+
+#### 17. As a Barbie Collector want to be able to feel my payment information is secure so that I can provide the information to make a purchase.
+1.	Credit card information is successfully validated by Stripe.
+2.	Transactions will fail should webhooks detect any issues.
+3.	While processing the transaction, a loading overlay with a spinning spiral is displayed that gives the user a true impression that background processes are running.
+4.	Should anything go wrong during transaction processing, the user is informed with a message displayed beneath the credit card input form field
+5.	If the payment was successful, the user is directed to the ‘Checkout Success’ page.
+
+#### 18. As a Barbie Collector want to be able to get a confirmation (by mail) after a purchase so that I can verify no mistakes were made.
+1.	If the payment was successful, the user is directed to the ‘Checkout Success’ page and a confirmation e-mail is sent to the user regarding the order number, date, order total, delivery costs, grand total and delivery address.
+
+#### 19. As a Store Owner I want to be able to add a product so that I can add new dolls and accessories to my store.
+1.	The admin is able to login to the Django back-office environment by adding ‘/admin’ to the base url of the website and log in using the admin’s username and password.
+2.	When clicked on ‘Products’, the admin is able to see an overview of all products.
+3.	When clicked on ‘add product’, the admin is able to add a product by inputting the following details: category, sku, name, description, views, price, condition, an image and availability.
+4.	When clicked on ‘save’, the product is successfully added.
+
+#### 20. As a Store Owner I want to be able to edit/update a product so that I can change the product prices, descriptions, availability and image.
+1.	The admin is able to login to the Django back-office environment by adding ‘/admin’ to the base url of the website and log in using the admin’s username and password.
+2.	When clicked on ‘Products’, the admin is able to see an overview of all products.
+3.	When clicked on the sku of a specific product, the admin is redirected to that products back-office page.
+4.	The admin is able to edit the details and save successfully.
+
+#### 21. As a Store Owner I want to be able to delete a product so that I can remove dolls and accessories that I don’t want to view in my store anymore.
+1.	The admin is able to login to the Django back-office environment by adding ‘/admin’ to the base url of the website and log in using the admin’s username and password.
+2.	When clicked on ‘Products’, the admin is able to see an overview of all products.
+3.	The admin is able to select certain products.
+4.	The admin is able to select an action in the dropdown input at the top of the page and select ‘delete selected products’.
+5.	When clicked on ‘Go’ the selected products are successfully deleted.
+
+#### 22. As a Store Owner I want to be able to view feedback of users so that I can respond to the feedback and get in touch with my customers.
+1.	The admin is able to login to the Django back-office environment by adding ‘/admin’ to the base url of the website and log in using the admin’s username and password.
+2.	When clicked on ‘Contact’, the admin is able to see an overview of all submitted contact forms.
+3.	When clicked on a specific name, the admin can see the full details of that contact feedback, including an e-mail address, so the admin can respond.
+
+#### 23. As a Store Owner I want to view and edit comments for products so that I can control what comments are being submitted and delete inappropriate comments.
+1.	The admin is able to login to the Django back-office environment by adding ‘/admin’ to the base url of the website and log in using the admin’s username and password.
+2.	When clicked on ‘Comments’, the admin is able to see an overview of all submitted comments.
+3.	When clicked on a specific name, the admin can see the full details of that comment.
+4.	When clicked on the ‘Delete’ button in the left bottom corner of the page, the admin is asked if she is sure she wants to delete this comment.
+5.	When clicked on ‘Yes, I’m sure’, the comment is successfully deleted.
+
+### Further Testing
+- The Website was tested on Google Chrome, Microsoft Edge and Mozilla Firefox and everything works as it’s supposed to.
+- Using responsinator.com, the website was viewed on a variety of devices.
+- Asked friends to review the website and adjusted the site based on their feedback.
+
+### Known Bugs
+- On several mobile devices, when the website is viewed, the Barbie on the homepage is displayed lower than it’s supposed to. It overflows the header’s border but as of now I am not sure why this is happening.
+- On the contact page, when submitting a form, the message (toast) at first appeared, but with a 0% opacity. I experienced this as a strange issue as the JavaScript for this is loaded in the base.html file and on other pages the message appears with full opacity. I found a solution for this by adding the JavaScript code separately on the bottom of the contact.html page which fixed the issue. Yet I am still not sure why this is needed only on this page.
+
+## Deployment
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
