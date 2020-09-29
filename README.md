@@ -52,6 +52,36 @@ Barbie Booth utilises a colour scheme of 8 different colours. Pink and yellow co
 
 ### Mockups
 
-In this pdf file you can find the mockups that were created for Barbie Booth using Balsamiq:
+In this pdf file you can find the mockups that were created for Barbie Booth using Balsamiq.</br>
+It contains mockups for the following pages:
+
+- Home;
+- About;
+- Contact;
+- FAQS;
+- Products;
+- Product Details;
+- My Profile;
+- Cart;
+- Checkout.
 
 [PDF of Mockups of Barbie Booth](https://github.com/MarthGimenzo/barbiebooth/blob/master/static/pdf/barbiebooth_mockups.pdf)
+
+## Existing Features
+
+### Features for visitors on every page
+
+#### The Navbar
+
+- On the left side, the navbar contains the logo of Barbie Booth. As is convention on websites, when clicked, the visitor is taken back to the home page.
+- The ‘Dolls’ link in the navbar triggers a dropdown menu with links to different categories of barbies and a link with ‘All dolls’. Clicking on these links will take the visitor to their respective product pages. For example, when ‘Barbie’ is clicked, it will take the user to the Products page and shows only dolls in the category ‘Barbie’.
+- The ‘Accessories’ link in the navbar triggers a dropdown menu with links to different categories of accessories such as shoes and bags. There is also a link with ‘All accessories’. Clicking on these links will take the visitor to their respective product pages. For example, when ‘Clothing’ is clicked, it will take the user to the Products page and shows only products in the category ‘Clothing’.
+- The ‘Search’ item in the navbar triggers a dropdown search bar which the visitor can use to find all sorts of products.
+- The ‘About’ link takes the visitor to the About page.
+- The ‘Sign In’ link in the navbar triggers a dropdown menu with links to sign in or register as a new user. The ‘Sign In’ link is only visible when no user is logged in to the website.
+- The ‘<USERNAME’> link in the navbar triggers a dropdown menu with links the signed in user’s profile and a link to log out. The link in the navbar shows the currently logged user’s username and is not visible when no user has logged in.
+- The ‘Cart’ link in the navbar shows the total price of all products that are currently in their cart and when clicked takes the visitor to the ‘Cart’ page.
+- The navbar collapses on devices up to medium screen size and will turn it into a dropdown menu that can be triggered using the button on the right size.
+
+#### Authorization
+
