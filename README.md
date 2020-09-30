@@ -478,6 +478,7 @@ All pictures of the products were taken by myself and are original. The followin
 - The third picture in the slideshow on the homepage (Chique Barbie) was retrieved from: [Internet-toys.com](https://www.internet-toys.com/372904-mattel-barbie-pop-jubileum-barbie-fashion-model-zwart/?gclid=Cj0KCQjwtsv7BRCmARIsANu-CQdVvTwlb_uom4CgB8OCi0bnzEvewEOae85rc45iO_TSIAj6_yDeSRMaAhRrEALw_wcB)
 - The fourth picture in the slideshow on the homepage (Skipper) was retrieved from: [Mattel.com](https://barbie.mattel.com/shop/en-us/ba/vintage-skipper-dolls/skipper-doll-original-outfit-950-1964)
 - The fifth picture in the slideshow on the homepage (Ken) was retrieved from: [Aliexpress.com](https://www.aliexpress.com/i/32991437444.html)
+- The upside down Barbie picture that appears on small devices was retrieved from: [oe24.at](https://www.oe24.at/welt/weltchronik/barbie-no-1-in-london-versteigert/24694)
 - The Barbie feet that were used as a background in the second section of the homepage were retrieved from [Womenshealthmag.com](https://www.womenshealthmag.com/life/a22102328/barbie-feet-instagram-trend)
 - The spiral image on the homepage was edited by myself and is used on several page but orginally comes from [Vectorstock.com](https://www.vectorstock.com/royalty-free-vector/abstract-swirl-background-from-spiral-ray-stripes-vector-16317114)
 - The font called 'DollieScript' is a font that need to be payed for if used on a launched website. It was retrieved from [Dafont.com](https://www.dafont.com/dollie-script.font?text=Barbie&psize=l)
